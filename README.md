@@ -22,7 +22,7 @@
 撮った写真をその場でアップロードすることが出来る
 
 ## 設計書
-[ER図]https://drive.google.com/file/d/14zWRYPnBWhdKTcRkEoLz08n830-3z220/view
+[ER図](https://drive.google.com/file/d/14zWRYPnBWhdKTcRkEoLz08n830-3z220/view)
 [テーブル定義書](https://docs.google.com/spreadsheets/d/1AXOetT3vub_R1mwqWN1IN-UJKMbqRrAPToK86SKtxrg/edit?usp=sharing)
 [アプリケーション詳細設計](https://docs.google.com/spreadsheets/d/1euJvyeKfuEULVkYm4wigMHZH9mXNVaAH72hhnqL0nNQ/edit?usp=sharing)
 
