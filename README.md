@@ -22,9 +22,10 @@
 撮った写真をその場でアップロードすることが出来る
 
 ## 設計書
-[ER図]<img width="829" alt="スクリーンショット 2021-04-03 15 02 41" src="https://user-images.githubusercontent.com/76931463/113470092-ccab2580-948d-11eb-9f79-04e0527b804d.png">
-[テーブル定義書](https://docs.google.com/spreadsheets/d/1AXOetT3vub_R1mwqWN1IN-UJKMbqRrAPToK86SKtxrg/edit?usp=sharing)
-[アプリケーション詳細設計](https://docs.google.com/spreadsheets/d/1euJvyeKfuEULVkYm4wigMHZH9mXNVaAH72hhnqL0nNQ/edit?usp=sharing)
+[ER図]<br>
+<img width="829" alt="スクリーンショット 2021-04-03 15 02 41" src="https://user-images.githubusercontent.com/76931463/113470092-ccab2580-948d-11eb-9f79-04e0527b804d.png"><br>
+[テーブル定義書](https://docs.google.com/spreadsheets/d/1AXOetT3vub_R1mwqWN1IN-UJKMbqRrAPToK86SKtxrg/edit?usp=sharing)<br>
+[アプリケーション詳細設計](https://docs.google.com/spreadsheets/d/1euJvyeKfuEULVkYm4wigMHZH9mXNVaAH72hhnqL0nNQ/edit?usp=sharing)<br>
 
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/1jGmzloY3J63WjTvCjpfMy-28pcu3AhDz-XDRJmSEhVQ/edit#gid=0
