@@ -5,10 +5,10 @@ class Pet < ApplicationRecord
   belongs_to :users
   belongs_to :genre
 
-  validates :name,presece: true
-  validates :image,presece: true
-  validates :gender,presece: true
-  validates :age,presece: true
+  validates :name, presece: true
+  validates :image, presece: true
+  validates :gender, presece: true
+  validates :age, presece: true
   
   
 end

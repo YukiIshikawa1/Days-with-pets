@@ -1,2 +1,53 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<div class="container">
+  <h2>新規投稿</h2>
+
+     <%= form_with model: @post,url: local: true do |f| %>
+      <div class="row">
+        <table>
+        <div class="col-12">
+          <tr>
+            <th>画像投稿</th>
+            <td><%= f.attachment_field :image, placeholder:"画像" %></td>
+          </tr> 
+        </div>
+        
+        <div class="col-12">
+          <tr>
+            <th>題名</th>
+            <td></td>
+          </tr> 
+        </div>  
+        
+        <div class="col-12">
+          <tr>
+            <th>本文</th>
+            <td></td>
+          </tr> 
+        </div> 
+        
+        <div class="col-12">
+          <tr>
+            <th>動物の種類</th>
+            <td></td>
+          </tr> 
+        </div>    
+        
+         <div class="col-12">
+          <tr>
+            <th>種類別</th>
+            <td></td>
+          </tr> 
+        </div> 
+        
+        <div class="col-12">
+          <tr>
+            <th>動物の種類が無ければ</th>
+            <td></td>
+          </tr> 
+        </div>  
+    </div>
+  </div>  
+  <% end %>
+</div>
+
+  

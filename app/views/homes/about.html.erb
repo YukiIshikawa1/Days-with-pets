@@ -1,2 +1,25 @@
 <h1>Homes#about</h1>
-<p>Find me in app/views/homes/about.html.erb</p>
+<div class="container">
+  <div class="row">
+    
+    <div class="col-12">
+      <% @posts.each do |posts| %>
+      <div class="posts-box">
+        <%= (attachment_image_tag posts, :image, size:"400x400") %>
+      </div>
+      <% end %>
+      
+      <div class="adout-text">
+        <p>ペットを飼っている人達の写真を共有したり</br>
+
+             WEBアプリケーション上に保存しいつでも気軽に見られる様に</br>
+
+            する為のECサイトです</br>
+
+            気軽に画像を投稿やコメントをして動物仲間を増やしましょう</br>
+
+            (※飼っているペットを共有してくだい)</br>
+        </div>
+      </div>  
+    </div>
+  </div>
