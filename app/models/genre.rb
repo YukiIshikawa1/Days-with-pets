@@ -1,7 +1,7 @@
 class Genre < ApplicationRecord
   
   has_many :posts
-  has_many :pets
+  belongs_to :pet, optional: true
   
   validates :animal_type, presence: true
   validates :type,        presence: true

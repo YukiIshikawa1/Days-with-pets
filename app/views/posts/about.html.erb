@@ -3,9 +3,9 @@
   <div class="row">
     
     <div class="col-12">
-      <% @posts.each do |posts| %>
+      <% @post.each do |image| %>
       <div class="posts-box">
-        <%= (attachment_image_tag posts, :image, size:"400x400") %>
+         <%= attachment_image_tag image, :post_image, :fill, 200, 120, format: "jpg" %>
       </div>
       <% end %>
       

@@ -1,14 +1,16 @@
 class Pet < ApplicationRecord
   
-  has_many :post
+  has_many :posts
   
-  belongs_to :users
-  belongs_to :genre
+  belongs_to :user
+  belongs_to :genre 
+  
+  attachment :pet_image 
 
-  validates :name, presece: true
-  validates :image, presece: true
-  validates :gender, presece: true
-  validates :age, presece: true
+  #validates :name, presence: true
+  #validates :pet_image, presence: true
+  #validates :gender, presence: true
+  #validates :age, presence: true
   
   
 end

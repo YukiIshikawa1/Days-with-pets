@@ -77,4 +77,4 @@ gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.13'
 gem 'rubocop', require: false
 gem 'rubocop-rails', require: false
-
+gem 'sprockets'

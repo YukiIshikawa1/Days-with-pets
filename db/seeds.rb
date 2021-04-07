@@ -8,17 +8,8 @@
   User.create!(
   name: "テスト太郎",
   nick_name: "太郎",
-  email: "test@test.com",
+  email: "aaaaa@aaa.com",
   password: "password"
-  )
-  Pet.create!(
-  user_id: "1",
-  post_id: "1",
-  genre_id: "1",
-  name: "太郎１",
-  gender: "オス",
-  age: "5",
-  image: File.open("app/assets/images/image/雑種.jpg")
   )
   Genre.create!(
   animal_type: "犬",
@@ -45,41 +36,41 @@
   user_id: "1",
   genre_id: "1",
   title: "日常風景",
-  text: "日常の中で取れた１枚です　うちの子かわいいでしょ！！！",
-  image: File.open("app/assets/images/image/チワワ.jpg")
+  text: "日常の中で取れた１枚です！",
+  post_image: File.open("app/assets/images/post_image/チワワ.jpg")
   )
   Post.create!(
   user_id: "1",
   genre_id: "1",
   title: "日常風景",
-  text: "日常の中で取れた１枚です　うちの子かわいいでしょ！！！",
-  image: File.open("app/assets/images/image/ゴールデンレトリバー.jpg")
+  text: "日常の中で取れた１枚です！！",
+  post_image: File.open("app/assets/images/post_image/ゴールデンレトリバー.jpg")
   )
   Post.create!(
   user_id: "1",
   genre_id: "1",
   title: "日常風景",
-  text: "日常の中で取れた１枚です　うちの子かわいいでしょ！！！",
-  image: File.open("app/assets/images/image/シベリアン・ハスキー.jpg")
+  text: "日常の中で取れた１枚です！！！",
+  post_image: File.open("app/assets/images/post_image/シベリアン・ハスキー.jpg")
   )
   Post.create!(
   user_id: "1",
   genre_id: "1",
   title: "日常風景",
-  text: "日常の中で取れた１枚です　うちの子かわいいでしょ！！！",
-  image: File.open("app/assets/images/image/トイプードル.jpg")
+  text: "日常の中で取れた１枚です！！！！",
+  post_image: File.open("app/assets/images/post_image/トイプードル.jpg")
   )
   Post.create!(
   user_id: "1",
   genre_id: "1",
   title: "日常風景",
-  text: "日常の中で取れた１枚です　うちの子かわいいでしょ！！！",
-  image: File.open("app/assets/images/image/トイプードル２.jpg")
+  text: "日常の中で取れた１枚です！！！！！",
+  post_image: File.open("app/assets/images/post_image/トイプードル２.jpg")
   )
   Post.create!(
   user_id: "1",
   genre_id: "1",
   title: "日常風景",
-  text: "日常の中で取れた１枚です　うちの子かわいいでしょ！！！",
-  image: File.open("app/assets/images/image/柴犬.jpg")
+  text: "日常の中で取れた１枚です！！！！！！",
+  post_image: File.open("app/assets/images/post_image/柴犬.jpg")
   )

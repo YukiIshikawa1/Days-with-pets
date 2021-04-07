@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    
+    <div class="col-6 mx-auto">
+      <% @post.each do |image| %>
+         <%= attachment_image_tag image, :post_image, format: "jpg", size:"200x200" %>
+      <% end %> 
+     </div>  
+  </div>
+</div>
+    
