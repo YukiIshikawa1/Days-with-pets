@@ -23,6 +23,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @user = User.find(current_user.id)
   end
 
   def show
@@ -30,6 +31,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = Post.find(params[:id])  
   end
 
   def update
@@ -40,7 +42,7 @@ class PostsController < ApplicationController
   
   private
   def post_params
-    params.require(:post).permit(:title,:text)
+    params.require(:post).permit(:post_image,:title,:text)
   end  
   
 end

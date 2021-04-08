@@ -1,13 +1,30 @@
-<div class="container">
+
   <h1>Posts#index</h1>
     <p>Find me in app/views/posts/index.html.erb</p>
   <div class=row>
-    <div class="col-6 mx-auto">
-      <% @post.each do |post| %>
+    <div class="col-md-3">
+      <%= render "users/info", user: @user %>
+    </div>  
+    <div class="col-md-9 mx-auto">
+      <% @posts.each do |image| %>
         <div class="image">
-          <%= attachment_image_tag post, :image, size:"200x200" %>
+          <%= link_to post_path(image) do %>
+            <%= attachment_image_tag image, :post_image, size:"600x300" %>
+          <% end %>  
         </div>
-        <% end %>
+        
+        <div class="title">
+          <%= image.title %>
+        </div>
+        
+        <div class="text">
+          <%= image.text %>
+        </div> 
+        
+        <div class="favorites">
+        <div> 
+        
+      <% end %>
     </div>    
   </div>
 </div>

@@ -12,5 +12,7 @@ class Post < ApplicationRecord
   validates :post_image, presence: true
   validates :title, presence: true
   validates :text, presence: true
+  
+  accepts_nested_attributes_for:genre, allow_destroy: true 
 
 end

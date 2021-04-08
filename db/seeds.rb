@@ -9,7 +9,17 @@
   name: "テスト太郎",
   nick_name: "太郎",
   email: "aaaaa@aaa.com",
-  password: "password"
+  password: "password",
+  user_image: File.open("app/assets/images/user_image/sakana.jpeg") 
+  )
+  Pet.create!(
+  user_id: "1",
+  post_id: "1",
+  genre_id: "1",
+  name: "太郎１",
+  gender: "オス",
+  age: "5",
+  pet_image: File.open("app/assets/images/pet_image/雑種.jpg")
   )
   Genre.create!(
   animal_type: "犬",

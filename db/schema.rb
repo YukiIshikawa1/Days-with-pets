@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2021_04_07_090503) do
     t.integer "post_id"
     t.integer "genre_id"
     t.string "name", null: false
-    t.string "pet_image", null: false
+    t.string "pet_image_id", null: false
     t.integer "gender", null: false
     t.string "age", null: false
     t.datetime "created_at", null: false
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 2021_04_07_090503) do
     t.string "encrypted_password", default: "", null: false
     t.string "name", null: false
     t.string "nick_name", null: false
+    t.string "user_image", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

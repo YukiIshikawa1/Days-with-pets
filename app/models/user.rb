@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :favorites
   
   validates :name, presence: true
+  validates :user_image, presence: true  
   validates :nick_name, presence: true
   validates :email, presence: true
   

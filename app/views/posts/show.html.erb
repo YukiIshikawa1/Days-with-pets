@@ -1,2 +1,21 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div class="container">
+  <div class=row>
+    <div class="col-md-3">
+    </div>  
+    
+    <div class="col-md-9 mx-auto">
+      <div class="title text-center">
+        <%= @post.title %>
+      </div>
+      
+      <div class="post_image">
+        <%= attachment_image_tag @post, :post_image,size: "800x400" %>
+      </div>
+      
+      <div class="post-text text-center">
+        <%= @post.text %>
+      </div>
+      
+      <!--ここにコメント関係を-->
+  </div>
+</div>  
