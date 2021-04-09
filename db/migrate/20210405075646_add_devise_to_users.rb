@@ -8,7 +8,7 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.2]
       t.string :encrypted_password, null: false, default: ""
       t.string :name,               null: false
       t.string :nick_name,          null: false
-      t.string :user_image,      null: false
+      t.string :user_image
       
 
       ## Recoverables

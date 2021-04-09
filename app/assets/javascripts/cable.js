@@ -11,3 +11,11 @@
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
+
+$(window).scroll(function () {
+if ($(this).scrollTop() > 100) {
+$('#page-top').fadeIn();
+} else {
+$('#page-top').fadeOut();
+}
+});

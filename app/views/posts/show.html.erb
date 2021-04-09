@@ -1,21 +1,49 @@
 <div class="container">
-  <div class=row>
+  <div class="row mt-3">
     <div class="col-md-3">
+      <%= render "users/info", user: @user %> 
     </div>  
     
     <div class="col-md-9 mx-auto">
       <div class="title text-center">
-        <%= @post.title %>
+        <strong><%= @post.title %></strong>
+      </div>
+      
+      <div class="edit m-3">
+        <% if current_user == @post.user %>
+          <%= link_to "編集", edit_post_path(@post), class: "btn btn-sm btn-success" %>
+          <%= link_to "削除", post_path(@post),method: :delete, class: "btn btn-sm btn-danger" %>  
+        <% end %>  
       </div>
       
       <div class="post_image">
-        <%= attachment_image_tag @post, :post_image,size: "800x400" %>
+        <%= attachment_image_tag @post, :post_image,size: "800x500" %>
       </div>
+      <table class="table">
+        <tr>
+          <th>本文</th> 
+          <th class="post-text ">
+            <%= @post.text %>
+          </th>
+        </tr>
+        
+        <tr class="post-genre">  
+          <th>ペットの種類</th> 
+          <th>
+             <%= @post.genre.animal_type %>
+          </th>
+        </tr>
       
-      <div class="post-text text-center">
-        <%= @post.text %>
-      </div>
-      
+        <tr class="post-genre-type">
+          <th>品種</th> 
+            <th>
+              <%= @post.genre.type %>
+            </th>
+        </tr>
+        
+
+      </table>
       <!--ここにコメント関係を-->
   </div>
 </div>  
+</div> 
