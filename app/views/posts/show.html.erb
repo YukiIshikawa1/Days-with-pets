@@ -8,9 +8,11 @@
       <div class="title text-center">
         <strong><h3><%= @post.title %></h3></strong>
       </div>
+      <% if current_user == @post.user %>
       <div>
-        <%= link_to edit_post_path(@post.id), class:"btn btn-success"  %>
+        <%= link_to "投稿編集",edit_post_path(@post.id), class:"btn btn-success"  %>
       </div>  
+      <% end %>
 
       
       <div class="post_image">
@@ -27,14 +29,14 @@
         <tr class="post-genre">  
           <th>ペットの種類</th> 
           <th>
-             <%= @post.genre.animal_type %>
+             <%= @genre.animal_type %>
           </th>
         </tr>
       
         <tr class="post-genre-type">
           <th>品種</th> 
             <th>
-              <%= @post.genre.type %>
+              <%= @genre.type %>
             </th>
         </tr>
         

@@ -38,10 +38,16 @@
           
           <div class="form-group">  
             <tr>
-              <th><%= link_to "投稿一覧",posts_path , class:"btn btn-success" %></th>
+              <th><%= link_to "投稿一覧",posts_path , class:"btn btn-primary" %></th>
               <td><%= link_to "会員編集",edit_user_path(@user.id) , class:"btn btn-success" %></td>              
             </tr>            
-          </div>          
+          </div> 
+          
+          <div class="form-group">  
+            <tr>
+              <th><%= link_to "会員ペット一覧",pets_path , class:"btn btn-primary" %></th>
+            </tr>            
+          </div>    
           
           </tbody>
         </table>            

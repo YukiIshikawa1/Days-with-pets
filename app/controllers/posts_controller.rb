@@ -28,9 +28,10 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @genre = Genre.find(params[:id])
     @user = User.find(@post.user.id)
   end
-
+  
   def edit
     @post = Post.find(params[:id])  
   end

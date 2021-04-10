@@ -28,21 +28,21 @@
         
         <div class="col-12">
           <tr>
-            <th><%= f.label :genre_id, "動物の種類" %></th>
+            <th><%= f.label :genre_id, "ペットの種類" %></th>
             <td><%= f.collection_select :genre_id, Genre.all, :id, :animal_type, prompt: "--選択してください--" , class:"form-control" %></td>
           </tr> 
         </div>   
         
         <div class="col-12">
           <tr>
-            <th><%= f.label :genre_id, "動物の種類" %></th>
+            <th><%= f.label :genre_id, "ペットの品種" %></th>
             <td><%= f.collection_select :genre_id, Genre.all, :id, :type, prompt: "--選択してください--" , class:"form-control" %></td>
           </tr> 
         </div> 
         
         <div class="col-12">
           <tr>
-            <th><%= f.submit "新規投稿" , class:"btn btn-success" %></th>
+            <th><%= f.submit "新規投稿" %></th>
           </tr> 
         </div>
         

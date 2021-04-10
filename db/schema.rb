@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_08_111921) do
+ActiveRecord::Schema.define(version: 2021_04_10_114748) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -30,8 +30,10 @@ ActiveRecord::Schema.define(version: 2021_04_08_111921) do
   create_table "genres", force: :cascade do |t|
     t.string "animal_type", null: false
     t.string "type", null: false
+    t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_genres_on_post_id"
   end
 
   create_table "pets", force: :cascade do |t|
@@ -44,6 +46,16 @@ ActiveRecord::Schema.define(version: 2021_04_08_111921) do
     t.string "age", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "post_genres", force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "genre_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["genre_id"], name: "index_post_genres_on_genre_id"
+    t.index ["post_id", "genre_id"], name: "index_post_genres_on_post_id_and_genre_id", unique: true
+    t.index ["post_id"], name: "index_post_genres_on_post_id"
   end
 
   create_table "posts", force: :cascade do |t|

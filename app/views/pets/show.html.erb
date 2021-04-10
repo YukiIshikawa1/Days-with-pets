@@ -1,2 +1,58 @@
 <h1>Pets#show</h1>
 <p>Find me in app/views/pets/show.html.erb</p>
+<div class="container pt-5 text-center">
+
+  <h2>会員編集</h2>
+      
+      <div class="row">
+        <table>     
+          <tbody>
+            
+          <div class="form-group">
+            <tr>
+              <th>会員画像</th>
+              <td>
+                <%= attachment_image_tag @pet, :pet_image, size:"200x200" %>  
+              </td> 
+            </tr>
+          </div>  
+           
+          <div class="form-group">  
+            <tr>
+              <th><h4>名前</h4></th>
+              <td><h4><%= @pet.name %></h4></td>
+            </tr>
+          </div>
+          
+          <div class="form-group">  
+            <tr>
+              <th><h4>性別</h4></th>
+              <td><h4><%= @pet.gender %></h4></td>
+            </tr>
+          </div>
+          
+          <div class="form-group">  
+            <tr>
+              <th><h4>年齢</h4></th>
+              <td><h4><%= @pet.age %></h4></td>
+            </tr>            
+          </div>
+          
+          <div class="form-group">  
+            <tr>
+              <th><%= link_to "投稿一覧",posts_path , class:"btn btn-primary" %></th>
+              <td><%= link_to "ペット編集",edit_pet_path(@pet.id) , class:"btn btn-success" %></td>              
+            </tr>            
+          </div> 
+          
+          <div class="form-group">  
+            <tr>
+              <th><%= link_to "会員ペット一覧",pets_path , class:"btn btn-primary" %></th>
+            </tr>            
+          </div>    
+          
+          </tbody>
+        </table>            
+      </div>
+
+</div>
