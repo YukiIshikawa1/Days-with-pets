@@ -1,2 +1,54 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="container pt-5 text-center">
+
+  <h2>会員編集</h2>
+      
+    <%= form_with model: @user,url:user_path(@user.id), local: true do |f| %>
+      <div class="row">
+        <table>     
+          <tbody>
+            
+          <div class="form-group">
+            <tr>
+              <th>会員画像</th>
+              <td>
+                <%= f.attachment_field :user_image, class: "form-control-file user_image" %>  
+              </td> 
+            </tr>
+          </div>  
+           
+          <div class="form-group">  
+            <tr>
+              <th>名前</th>
+              <td><%= f.text_field :name %></td>
+            </tr>
+          </div>
+          
+          <div class="form-group">  
+            <tr>
+              <th>ニックネーム</th>
+              <td><%= f.text_field :nick_name %></td>
+            </tr>
+          </div>
+          
+          <div class="form-group">  
+            <tr>
+              <th>メールアドレス</th>
+              <td><%= f.text_field :email %></td>
+            </tr>            
+          </div>
+          
+          <div class="form-group">  
+            <tr>
+              <th>
+                <td><%= f.submit "編集更新" , class:"btn btn-success" %></td>
+              </th>
+            </tr>            
+          </div>
+          
+          </tbody>
+        </table>            
+      </div>
+ 
+      <% end %>
+      
+</div>

@@ -47,3 +47,4 @@ https://docs.google.com/spreadsheets/d/1jGmzloY3J63WjTvCjpfMy-28pcu3AhDz-XDRJmSE
 
 ## 使用素材
 - [アフロ](https://www.aflo.com/ja/pages/creative/animal)
+- [パクタソ](https://www.pakutaso.com/)

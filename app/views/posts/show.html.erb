@@ -6,15 +6,12 @@
     
     <div class="col-md-9 mx-auto">
       <div class="title text-center">
-        <strong><%= @post.title %></strong>
+        <strong><h3><%= @post.title %></h3></strong>
       </div>
-      
-      <div class="edit m-3">
-        <% if current_user == @post.user %>
-          <%= link_to "編集", edit_post_path(@post), class: "btn btn-sm btn-success" %>
-          <%= link_to "削除", post_path(@post),method: :delete, class: "btn btn-sm btn-danger" %>  
-        <% end %>  
-      </div>
+      <div>
+        <%= link_to edit_post_path(@post.id), class:"btn btn-success"  %>
+      </div>  
+
       
       <div class="post_image">
         <%= attachment_image_tag @post, :post_image,size: "800x500" %>
