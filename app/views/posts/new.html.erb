@@ -35,8 +35,8 @@
         
         <div class="col-12">
           <tr>
-            <th><%= f.label :genre_id, "ペットの品種" %></th>
-            <td><%= f.collection_select :genre_id, Genre.all, :id, :type, prompt: "--選択してください--" , class:"form-control" %></td>
+            <th><%= f.label :category_id, "ペットの品種" %></th>
+            <td><%= f.collection_select :category_id, Genre.all, :id, :category, prompt: "--選択してください--" , class:"form-control" %></td>
           </tr> 
         </div> 
         

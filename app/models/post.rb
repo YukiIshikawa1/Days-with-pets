@@ -2,9 +2,10 @@ class Post < ApplicationRecord
   
   has_many :comments
   has_many :favorites
-  has_many :genres, through: :post_genres
-  has_many :post_genres
+
   
+  belongs_to :genre, optional: true
+  belongs_to :category, optional: true
   belongs_to :user, optional: true
   belongs_to :pet, optional: true
   

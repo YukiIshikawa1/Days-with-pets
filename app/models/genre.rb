@@ -1,7 +1,6 @@
 class Genre < ApplicationRecord
   
-  has_many :posts, through: :post_genres
-  has_many :post_genres 
+  has_many :categories
   
   accepts_nested_attributes_for :post_genres
   

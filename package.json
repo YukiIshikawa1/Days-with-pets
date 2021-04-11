@@ -1,5 +1,7 @@
 {
   "name": "DWP",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "swiper": "^6.5.6"
+  }
 }

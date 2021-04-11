@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_10_114748) do
+ActiveRecord::Schema.define(version: 2021_04_11_134759) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -33,6 +39,7 @@ ActiveRecord::Schema.define(version: 2021_04_10_114748) do
     t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "category_id"
     t.index ["post_id"], name: "index_genres_on_post_id"
   end
 
@@ -46,16 +53,7 @@ ActiveRecord::Schema.define(version: 2021_04_10_114748) do
     t.string "age", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "post_genres", force: :cascade do |t|
-    t.integer "post_id"
-    t.integer "genre_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["genre_id"], name: "index_post_genres_on_genre_id"
-    t.index ["post_id", "genre_id"], name: "index_post_genres_on_post_id_and_genre_id", unique: true
-    t.index ["post_id"], name: "index_post_genres_on_post_id"
+    t.string "category_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -66,6 +64,7 @@ ActiveRecord::Schema.define(version: 2021_04_10_114748) do
     t.text "text", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "category_id"
   end
 
   create_table "relationships", force: :cascade do |t|

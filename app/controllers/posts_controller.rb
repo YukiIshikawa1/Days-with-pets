@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
   
   def top
-    @post = Post.all
+    @posts = Post.all
   end
 
   def about
-    @post = Post.all
+    @posts = Post.all
   end
   
   def new
@@ -28,8 +28,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @genre = Genre.find(params[:id])
-    @user = User.find(@post.user.id)
+    @genre = Genre.find(@post.genre_id)
+    @pet = Pet.find(@post.)
+    @user = User.find(@post.user_id)
   end
   
   def edit
@@ -52,7 +53,7 @@ class PostsController < ApplicationController
   
   private
   def post_params
-    params.require(:post).permit(:post_image,:title,:text)
+    params.require(:post).permit(:post_image,:title,:text,:genre_id)
   end  
   
 end

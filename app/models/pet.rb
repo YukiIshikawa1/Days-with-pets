@@ -1,9 +1,10 @@
 class Pet < ApplicationRecord
   
   has_many :posts
+  has_many :categories
+  has_many :genres
   
   belongs_to :user, optional: true
-  belongs_to :genre, optional: true
   
   attachment :pet_image 
 

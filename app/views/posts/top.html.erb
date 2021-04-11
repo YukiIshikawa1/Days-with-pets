@@ -1,11 +1,10 @@
-<div class="container">
-  <div class="row">
-    
-    <div class="col-6 mx-auto">
-      <% @post.each do |image| %>
-         <%= attachment_image_tag image, :post_image, format: "jpg", size:"200x200" %>
-      <% end %> 
-     </div>  
+<div>
+ <h1>ペットとの思い出をいつまでも Days with pets </h1>
+</div> 
+<div class="previews">
+  <div class="slider">
+      <%= image_tag '柴犬' %>
+      <%= image_tag 'チワワ' %>
+      <%= image_tag 'ゴールデンレトリバー' %>
   </div>
 </div>
-    
