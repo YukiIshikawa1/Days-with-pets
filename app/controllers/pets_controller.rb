@@ -1,8 +1,16 @@
 class PetsController < ApplicationController
   def new
+    @pet = Pet.new
   end
 
   def create
+    @pet = Pet.new(pet_params)
+    @pet.user = current_user
+    if @pet.save
+      redirect_to pets_path(@pet.id), success: "登録しました"
+    else
+      render "new", denger: "登録に失敗しました" 
+    end  
   end
 
   def index
@@ -35,7 +43,7 @@ class PetsController < ApplicationController
   
   #保存するテーブル名とカラム名
   def pet_params
-    params.require(:pet).permit(:pet_image,:name,:gender,:age)
+    params.require(:pet).permit(:pet_image,:name,:gender,:age, :genre_id, :category_id)
   end
   
 end

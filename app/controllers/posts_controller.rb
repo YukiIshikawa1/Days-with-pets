@@ -23,13 +23,15 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @genres = Genre.all
     @user = User.find(current_user.id)
   end
 
   def show
     @post = Post.find(params[:id])
     @genre = Genre.find(@post.genre_id)
-    @pet = Pet.find(@post.)
+    @category = Category.find(@post.category_id)
+    @pet = Pet.find(@post.pet_id)
     @user = User.find(@post.user_id)
   end
   
@@ -53,7 +55,7 @@ class PostsController < ApplicationController
   
   private
   def post_params
-    params.require(:post).permit(:post_image,:title,:text,:genre_id)
+    params.require(:post).permit(:post_image,:title,:text,:genre_id,:category_id,:pet_id)
   end  
   
 end

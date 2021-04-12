@@ -18,6 +18,6 @@ end
   end
 
   resources :pets
-  resources :genres,only: [:index]
-  
+  resources :genres,only: [:index,:new,:create]
+  resources :categories,only: [:index,:new,:create]
 end

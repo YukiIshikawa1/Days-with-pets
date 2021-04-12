@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container text-center pt-3">
   <h2>投稿編集</h2>
 
      <%= form_with model: @post,url:post_path(@post.id), method: :patch, local: true do |f| %>
@@ -7,7 +7,7 @@
         
         <table>
         
-        <div class="col-12">
+        <div class="col-12 ">
           <tr>
             <th><%=f.label :title, "題名" %></th>
             <td><%= f.text_field :title, placeholder:"タイトル" %></td>
@@ -23,21 +23,27 @@
         
         <div class="col-12">
           <tr>
-            <th><%=f.label :genre_id, "動物の種類" %></th>
-            <td><%= f.collection_select :genre_id, Genre.all, :id, :animal_type, prompt: "--選択してください--", class: "form-control" %></td>
+            <th><%= f.label :genre_id, "ペットの種類" %></th>
+            <td>
+              <%= f.collection_select :genre_id, Genre.all, :id, :animal_type, prompt: "--選択してください--" , class:"form-control" %>
+              <p>なければ<%= link_to "コチラから", new_genre_path %></p>
+            </td>
           </tr> 
         </div>
         
-          <div class="col-12">
-          <tr>
-            <th><%=f.label :genre_id, "ペットの品種" %></th>
-            <td><%= f.collection_select :genre_id, Genre.all, :id, :type, prompt: "--選択してください--", class: "form-control" %></td>
+        <div class="col-12">
+          <tr>  
+            <th><%= f.label :category_id, "ペットの品種" %></th>
+            <td>
+              <%= f.collection_select :category_id, Category.all, :id, :category, prompt: "--選択してください--" , class:"form-control" %>　
+              <p>なければ<%= link_to "コチラから", new_category_path %></p>
+            </td>
           </tr> 
         </div>
         
         <div class="col-12">
           <tr>
-            <th><%= f.submit "編集更新" , class:"btn btn-success" %></th>
+            <th><%= f.submit "編集更新" , class:"btn btn-success mb-3" %></th>
           </tr> 
         </div>
         

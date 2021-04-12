@@ -4,7 +4,7 @@
       <%= render "users/info", user: @user %> 
     </div>  
     
-    <div class="col-md-9">
+    <div class="col-md-7">
       <% @posts.each do |image| %>
         <div class="image">
           <%= link_to post_path(image) do %>
@@ -20,7 +20,16 @@
           <%= image.text %>
         </div> 
       <% end %>
-    </div>    
+    </div>  
+    
+    <div class="col-2">
+      <h2>動物の種類</h2>
+      <% @genres.each do |genre| %>
+        <div class="category text-center p-2">
+          <%= link_to genre.animal_type %>
+        </div>  
+      <% end %>  
+    </div>  
     
   </div>
 </div>
