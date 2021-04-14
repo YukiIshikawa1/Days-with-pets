@@ -6,8 +6,9 @@ class CategoriesController < ApplicationController
   
   def create
     @category = Category.new(category_params)
+    @category.user_id = current_user.id 
     if @category.save
-      redirect_to new_post_path, success: "追加しました"
+      redirect_to new_genre_path, success: "追加しました"
     else
       render "new", denger: "投稿に失敗しました" 
     end

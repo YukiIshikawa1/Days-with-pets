@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+
+        <table class="table">
+          
+          <therd>
+            <tr>
+              <th>会員画像</th>
+              <th>ニックネーム</th>
+              <th>フォロー</th>
+              <th>フォロワー</th>
+              <th>投稿数</th>
+              <th>ペット数</th>
+            </tr>           
+          </thred>
+      
+          <tbody>
+           <% @users.each do |user| %>
+            <tr>
+              <td>
+                <%= link_to user_path(user.id) do %>
+                  <%= attachment_image_tag user, :user_image, :fill, 100, 100, fallback: "No_image.jpeg" ,size:"100x100" %>
+                <% end %> 
+              </td>
+              <td>
+                <%= link_to user_path(user.id) do %>
+                  <%= user.nick_name %>
+                <% end %> 
+              </td>
+              <td>
+                <%= link_to follower_user_path(user.id) do %>
+                  フォロー数：<%= user.following_user.count %>
+                <% end %>
+              </td>
+              <td>
+                <%= link_to followed_user_path(user.id) do %>
+                  フォロワー数：<%= user.follower_user.count %>
+                <% end %> 
+              </td>
+              <td>
+                <%= link_to posts_path(user.id) do %>
+                  投稿数：<%= user.posts.count %>
+                <% end %> 
+              </td>
+              <td>
+                <%= link_to pets_path(user.id) do %>
+                  <%= user.pets.count %>匹
+                <% end %> 
+              </td>
+            </tr>
+            <% end %>
+          <tbody>
+        
+        </table>  
+     
+    </div>
+  </div>
+</div>  

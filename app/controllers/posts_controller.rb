@@ -1,15 +1,21 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, except: [:top, :about, :index]
   
   def top
     @posts = Post.all
   end
 
   def about
-    @posts = Post.all
+    @posts = Post.limit(5) 
   end
   
   def new
     @post = Post.new  
+    @pet = Pet.where(user_id: current_user.id)
+    @genre = Genre.where(user_id: current_user.id)
+    @category = Category.where(user_id: current_user.id)
+    
+  
   end
 
   def create
@@ -22,9 +28,10 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
-    @genres = Genre.all
+    @posts = Post.all.page(params[:page]).per(5)
+    if user_signed_in?
     @user = User.find(current_user.id)
+    end
   end
 
   def show
@@ -33,6 +40,8 @@ class PostsController < ApplicationController
     @category = Category.find(@post.category_id)
     @pet = Pet.find(@post.pet_id)
     @user = User.find(@post.user_id)
+    @comment = Comment.new
+    @comments = @post.comments.order(created_at: :desc)
   end
   
   def edit

@@ -6,6 +6,22 @@
         <table>
           
           <tr>
+            <th><%= f.label :genre_id, "ペットの種類" %></th>
+            <td>
+              <%= f.collection_select :genre_id, @genre, :id, :animal_type, prompt: "--選択してください--" , class:"form-control" %>
+              <p>なければ<%= link_to "コチラから", new_genre_path %></p>
+            </td>
+          </tr> 
+
+          <tr>
+            <th><%= f.label :category_id, "ペットの品種" %></th>
+            <td>
+              <%= f.collection_select :category_id, @category, :id, :category, prompt: "--選択してください--" , class:"form-control" %>　
+              <p>なければ<%= link_to "コチラから", new_category_path %></p>
+            </td>
+          </tr>            
+          
+          <tr>
             <th><%= f.label :image, "ペット画像" %></th>
             <td><%= f.attachment_field  :pet_image, class: "form-control-file pet_image" %></td>
           </tr>
@@ -28,21 +44,7 @@
             </td>
           </tr> 
         
-          <tr>
-            <th><%= f.label :genre_id, "ペットの種類" %></th>
-            <td>
-              <%= f.collection_select :genre_id, Genre.all, :id, :animal_type, prompt: "--選択してください--" , class:"form-control" %>
-              <p>なければ<%= link_to "コチラから", new_genre_path %></p>
-            </td>
-          </tr> 
-
-          <tr>
-            <th><%= f.label :category_id, "ペットの品種" %></th>
-            <td>
-              <%= f.collection_select :category_id, Category.all, :id, :category, prompt: "--選択してください--" , class:"form-control" %>　
-              <p>なければ<%= link_to "コチラから", new_category_path %></p>
-            </td>
-          </tr>      
+    
           
           <tr>
             <th><%= f.submit "新規投稿", class: "btn btn-outline-success" %></th>

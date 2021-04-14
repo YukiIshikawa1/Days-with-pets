@@ -31,7 +31,7 @@
 
 ## 設計書
 ER図<br>
-<img width="826" alt="スクリーンショット 2021-04-03 15 05 57" src="https://user-images.githubusercontent.com/76931463/113470132-20b60a00-948e-11eb-82bd-e2dfa84fbb4c.png"><br>
+<img width="811" alt="スクリーンショット 2021-04-14 17 40 57" src="https://user-images.githubusercontent.com/76931463/114680963-a9fbf500-9d48-11eb-9d14-0f702c31a80b.png"><br>
 [テーブル定義書](https://docs.google.com/spreadsheets/d/1AXOetT3vub_R1mwqWN1IN-UJKMbqRrAPToK86SKtxrg/edit?usp=sharing)<br>
 [アプリケーション詳細設計](https://docs.google.com/spreadsheets/d/1euJvyeKfuEULVkYm4wigMHZH9mXNVaAH72hhnqL0nNQ/edit?usp=sharing)<br>
 
@@ -44,6 +44,7 @@ https://docs.google.com/spreadsheets/d/1jGmzloY3J63WjTvCjpfMy-28pcu3AhDz-XDRJmSE
 - フレームワーク：Ruby on Rails
 - JSライブラリ：jQuery
 - IDE：Cloud9
+- デバック：byebug・pry-rails
 
 ## 使用素材
 - [アフロ](https://www.aflo.com/ja/pages/creative/animal)

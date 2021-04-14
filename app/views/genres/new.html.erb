@@ -13,8 +13,15 @@
                 
             <tr>
               <th></th>
-              <td><%= f.submit "新規投稿", class: "btn btn-outline-success mt-3" %></td>
+              <td><%= f.submit "新規登録", class: "btn btn-outline-success mt-3" %></td>
             </tr> 
+            
+            <tr>
+              <th></th>
+              <td><%= link_to "ペット登録画面", new_pet_path,   class: "btn btn-outline-success mt-3" %></td>
+              <td><%= link_to "新規投稿画面", new_post_path, class: "btn btn-outline-success mt-3" %></td>
+            </tr>              
+            
           </table>
         </div>
       <% end %>

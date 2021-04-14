@@ -6,8 +6,9 @@ class GenresController < ApplicationController
   
   def create
     @genre = Genre.new(genre_params)
+    @genre.user_id = current_user.id 
     if @genre.save
-      redirect_to new_post_path, success: "追加しました"
+      redirect_to new_category_path, success: "追加しました"
     else
       render "new", denger: "投稿に失敗しました" 
     end

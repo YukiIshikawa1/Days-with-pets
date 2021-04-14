@@ -1,5 +1,7 @@
 class PetsController < ApplicationController
   def new
+    @genre = Genre.where(user_id: current_user.id)
+    @category = Category.where(user_id: current_user.id)
     @pet = Pet.new
   end
 
@@ -15,6 +17,7 @@ class PetsController < ApplicationController
 
   def index
     @pets = Pet.all
+    @user = User.where(user_id: current_user.id)
   end
 
   def show

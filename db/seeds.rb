@@ -16,38 +16,48 @@
 
   
   Category.create!(
+  user_id: "1",
   category: "ゴールデン・レトリーバー",
   )
   Category.create!(
+  user_id: "1",  
   category: "カワウソ",
   )
   Category.create!(
+  user_id: "1",  
   category: "アナウサギ",
   )
   Category.create!(
+  user_id: "1",  
   category: "セキセイインコ",
   )
   Category.create!(
+  user_id: "1",  
   category: "アメリカン・ショートヘア",
   )
   
   Genre.create!(
+  user_id: "1",
   animal_type: "犬",
   category_id: "1"
   )
   Genre.create!(
+  user_id: "1",  
   animal_type: "猫",
   category_id: "1"  
   )
   Genre.create!(
+  user_id: "1",  
   animal_type: "鳥類",
   category_id: "1" 
   )
   Genre.create!(
+  user_id: "1",  
   animal_type: "うさぎ",
   category_id: "1" 
   )
   Genre.create!(
+  user_id: "1",  
   animal_type: "カワウソ",
   category_id: "1" 
   )
@@ -75,6 +85,7 @@
   user_id: "1",
   genre_id: "1",
   category_id: "1",
+  pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！！",
   post_image: File.open("app/assets/images/post_image/ゴールデンレトリバー.jpg")
@@ -83,6 +94,7 @@
   user_id: "1",
   genre_id: "1",
   category_id: "1",
+  pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！！！",
   post_image: File.open("app/assets/images/post_image/シベリアン・ハスキー.jpg")
@@ -91,6 +103,7 @@
   user_id: "1",
   genre_id: "1",
   category_id: "1",
+  pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！！！！",
   post_image: File.open("app/assets/images/post_image/トイプードル.jpg")
@@ -99,6 +112,7 @@
   user_id: "1",
   genre_id: "1",
   category_id: "1",
+  pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！！！！！",
   post_image: File.open("app/assets/images/post_image/トイプードル２.jpg")
@@ -107,6 +121,7 @@
   user_id: "1",
   genre_id: "1",
   category_id: "1",
+  pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！！！！！！",
   post_image: File.open("app/assets/images/post_image/柴犬.jpg")

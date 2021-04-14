@@ -1,13 +1,15 @@
-<h1>Homes#about</h1>
 <div class="container">
   <div class="row">
     
-    <div class="col-12">
-      <% @posts.each do |image| %>
-      <div class="posts-box">
-         <%= attachment_image_tag image, :post_image, :fill, 200, 120, format: "jpg" %>
+    <div class="col-12"> 
+    <div class="previews">
+      <div class="slider">
+        <%= image_tag '柴犬' %>
+        <%= image_tag 'チワワ' %>
+        <%= image_tag 'ゴールデンレトリバー' %>
       </div>
-      <% end %>
+    </div>
+    </div>
       
       <div class="adout-text">
         <p>ペットを飼っている人達の写真を共有したり</br>
@@ -21,5 +23,4 @@
             (※飼っているペットを共有してくだい)</br>
         </div>
       </div>  
-    </div>
-  </div>
+    </div>  

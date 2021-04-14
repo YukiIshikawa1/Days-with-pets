@@ -47,9 +47,26 @@
             </th>
         </tr>
         
-
       </table>
       <!--ここにコメント関係を-->
+      <div id="post_favorite_<%= @post.id %>">
+        <%= render "favorites/favorite", post: @post %>
+      </div>
+      
+        
+    <% if user_signed_in? %>
+        <div class="comment-create">
+            <h3 class="text-left">レビューを投稿する</h3>
+            <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
+        </div>
+    <% end %>
+    
+      <div class="row">
+        <div class="col-12">
+        <div id="comments_area">
+            <%= render partial: 'comments/index', locals: { comments: @comments } %>
+        </div>
+        </div>
   </div>
 </div>  
 </div> 

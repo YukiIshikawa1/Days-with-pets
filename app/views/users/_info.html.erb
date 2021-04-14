@@ -22,7 +22,7 @@
     <th>フォロー</th>
     <th>
       <%= link_to follower_user_path(user.id) do %>
-      <%= user.follower_user.count %>
+        <%= user.following_user.count %>
       <% end %>
     </th>  
   </tr>
@@ -31,7 +31,7 @@
     <th>フォロワー</th>
     <th>
       <%= link_to followed_user_path(user.id) do %>
-      <%= user.following_user.count %>
+        <%= user.follower_user.count %>
       <% end %>      
     </th>  
   </tr>

@@ -4,10 +4,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          
-  has_many :posts
-  has_many :pets
-  has_many :comments
-  has_many :favorites
+  has_many :posts, dependent: :destroy
+  has_many :pets, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :favorites, dependent: :destroy
+  has_many :genres, dependent: :destroy
+  has_many :categories, dependent: :destroy
   
    # フォローしている
     has_many :follower, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
@@ -30,6 +32,10 @@ class User < ApplicationRecord
   # 3. followingメソッド　＝　既にフォローしているかの確認
   def following?(user)
    following_user.include?(user)
+  end
+  #いいねしているかどうか
+  def already_favorite?(post)
+   self.favorites.exists?(post_id: post.id)
   end
   
   validates :name, presence: true
