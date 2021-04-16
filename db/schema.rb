@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_12_034203) do
+ActiveRecord::Schema.define(version: 2021_04_16_131142) do
 
   create_table "categories", force: :cascade do |t|
-    t.integer "user_id"
     t.string "category", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_categories_on_user_id"
+    t.string "ancestry"
+    t.index ["ancestry"], name: "index_categories_on_ancestry"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -33,15 +33,6 @@ ActiveRecord::Schema.define(version: 2021_04_12_034203) do
     t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "genres", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "animal_type", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "category_id"
-    t.index ["user_id"], name: "index_genres_on_user_id"
   end
 
   create_table "pets", force: :cascade do |t|

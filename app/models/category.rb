@@ -2,10 +2,8 @@ class Category < ApplicationRecord
   
   has_many :posts
   has_many :pets
-  has_many :genres
   
-  belongs_to :user
-
+  has_ancestry
   
   validates :category, presence: true, uniqueness: true
   

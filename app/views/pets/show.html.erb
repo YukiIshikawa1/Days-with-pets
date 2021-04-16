@@ -40,13 +40,13 @@
           <div class="form-group">  
             <tr>
               <th><%= link_to "投稿一覧",posts_path , class:"btn btn-primary" %></th>
-              <td><%= link_to "ペット編集",edit_pet_path(@pet.id) , class:"btn btn-success" %></td>              
+              <td><%= link_to "ペット編集",edit_user_pet_path(@pet.user_id,@pet.id) , class:"btn btn-success" %></td>              
             </tr>            
           </div> 
           
           <div class="form-group">  
             <tr>
-              <th><%= link_to "会員ペット一覧",pets_path , class:"btn btn-primary" %></th>
+              <th><%= link_to "会員ペット一覧",user_pets_path(@pet.user_id,@pet.id) , class:"btn btn-primary" %></th>
             </tr>            
           </div>    
           

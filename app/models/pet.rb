@@ -3,7 +3,6 @@ class Pet < ApplicationRecord
   has_many :posts
   
   belongs_to :category
-  belongs_to :genre
   belongs_to :user
   
   attachment :pet_image 

@@ -1,33 +1,25 @@
 <div class="container text-center">
   <h2>新規投稿</h2>
-    <p>ペットの登録はお済みですか？　登録してなければ<%= link_to "コチラ", new_pet_path %></p>
+    <p>ペットの登録はお済みですか？　登録してなければ<%= link_to "コチラ", new_user_pet_path(current_user) %></p>
     <p class="text-danger">＊ペットの登録は一番最初にしてください</p>
 
      <%= form_with model: @post,url:posts_path, local: true do |f| %>
       <div class="row">
         
         <table>
-          
+           
           <tr>
             <th><%= f.label :pet_id, "ペットの名前" %></th>
             <td><%= f.collection_select :pet_id, @pet, :id, :name, prompt: "--選択してください--" , class:"form-control" %></td>
           </tr> 
         
           <tr>
-            <th><%= f.label :genre_id, "ペットの種類" %></th>
+            <th><%= f.label :category_id, "ペットの種類" %></th>
             <td>
-              <%= f.collection_select :genre_id, @genre, :id, :animal_type, prompt: "--選択してください--" , class:"form-control" %>
-              <p>なければ<%= link_to "コチラから", new_genre_path %></p>
-            </td>
-          </tr> 
-        
-          <tr>
-            <th><%= f.label :category_id, "ペットの品種" %></th>
-            <td>
-              <%= f.collection_select :category_id, @category, :id, :category, prompt: "--選択してください--" , class:"form-control" %>　
+              <%= f.collection_select :category_id, @parents, :id, :category, { include_blank: "---", selected:"" }, id:"category_form" %>　
               <p>なければ<%= link_to "コチラから", new_category_path %></p>
             </td>
-          </tr>           
+          </tr>    
           
           <tr>
             <th><%=f.label :image, "画像投稿" %></th>
