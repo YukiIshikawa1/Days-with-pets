@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_16_131142) do
-
-  create_table "categories", force: :cascade do |t|
-    t.string "category", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "ancestry"
-    t.index ["ancestry"], name: "index_categories_on_ancestry"
-  end
+ActiveRecord::Schema.define(version: 2021_04_12_034203) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -38,6 +30,8 @@ ActiveRecord::Schema.define(version: 2021_04_16_131142) do
   create_table "pets", force: :cascade do |t|
     t.integer "user_id"
     t.integer "genre_id"
+    t.string "genre", null: false
+    t.string "category", null: false
     t.string "name", null: false
     t.string "pet_image_id", null: false
     t.integer "gender", null: false
@@ -53,7 +47,6 @@ ActiveRecord::Schema.define(version: 2021_04_16_131142) do
     t.integer "user_id"
     t.integer "genre_id"
     t.integer "pet_id"
-    t.integer "category_id"
     t.string "post_image_id", null: false
     t.string "title", null: false
     t.text "text", null: false

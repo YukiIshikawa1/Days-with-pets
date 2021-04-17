@@ -16,12 +16,6 @@ Rails.application.routes.draw do
   resources :posts do
     resource :favorites,only: [:create,:destroy]
     resources :comments,only: [:create,:destroy]
-      collection do
-        get :category
-      end
-      
   end
-  
-  resources :categories,only: [:index,:new,:create]
   
 end

@@ -2,9 +2,9 @@
 <p>Find me in app/views/pets/edit.html.erb</p>
 <div class="container pt-5 text-center">
 
-  <h2>ペット編集</h2>
+  <h2>会員編集</h2>
       
-    <%= form_with model: @pet,url: user_pet_path(@pet.user_id,@pet.id), local: true do |f| %>
+    <%= form_with model: @pet,url:pet_path(@pet.id), local: true do |f| %>
       <div class="row">
         <table>     
           <tbody>
@@ -27,18 +27,15 @@
           
           <div class="form-group">  
             <tr>
-            <th><%= f.label :gender, "ペットの性別" %></th>
-            <td><%= f.select :gender, ["男の子","女の子","不明"] %></td>
+              <th>性別</th>
+              <td><%= f.text_field :gender %></td>
             </tr>
           </div>
           
           <div class="form-group">  
             <tr>
-            <th><%= f.label :age, "ペットの歳" %></th>
-            <td><%= f.select :age, {"1":1, "2":2, "3":3, "4":4, "5":5, "6":6, "7":7, "8":8, "9":9, "10":10, "11":11, "12":12, "13":13, "14":14, "15":15},
-                    { include_blank: true, selected: @pet.age },
-                    class: "change-pet"%>
-            </td>
+              <th>年齢</th>
+              <td><%= f.text_field :age %></td>
             </tr>            
           </div>
           

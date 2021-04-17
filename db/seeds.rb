@@ -5,8 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-
   User.create!(
   name: "テスト太郎",
   nick_name: "太郎",
@@ -15,26 +13,10 @@
   user_image: File.open("app/assets/images/user_image/sakana.jpeg") 
   )
   
-  lady = Category.create(:category=>"レディース")
-  animal = Category.create(:category=>"犬")
-  
-  lady_tops = lady.children.create(:category=>"トップス")
-  lady_jacket = lady.children.create(:category=>"ジャケット/アウター")
-  
-  animal_dogs = animal.children.create(:category=>"チワワ")
-  animal_dogs = animal.children.create(:category=>"ゴールデンレトリバー")
-  animal_dogs = animal.children.create(:category=>"柴犬")
-  
-  animal_dogs.children.create([{:category=>"test1"}, {:category=>"test2"},{:category=>"test3"}])
-  
-  lady_tops.children.create([{:category=>"Tシャツ/カットソー(半袖/袖なし)"}, {:category=>"Tシャツ/カットソー(七分/長袖)"},{:category=>"その他"}])
-  lady_jacket.children.create([{:category=>"テーラードジャケット"}, {:category=>"ノーカラージャケット"}, {:category=>"Gジャン/デニムジャケット"},{:category=>"その他"}])
-  
-
-  
   Pet.create!(
   user_id: "1",
-  category_id: "1",
+  genre: "犬",
+  category: "雑種",
   name: "太郎１",
   gender: "男の子",
   age: "5",
@@ -43,7 +25,6 @@
   
   Post.create!(
   user_id: "1",
-  category_id: "1",
   pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！",
@@ -51,7 +32,6 @@
   )
   Post.create!(
   user_id: "1",
-  category_id: "1",
   pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！！",
@@ -59,7 +39,6 @@
   )
   Post.create!(
   user_id: "1",
-  category_id: "1",
   pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！！！",
@@ -67,7 +46,6 @@
   )
   Post.create!(
   user_id: "1",
-  category_id: "1",
   pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！！！！",
@@ -75,7 +53,6 @@
   )
   Post.create!(
   user_id: "1",
-  category_id: "1",
   pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！！！！！",
@@ -83,10 +60,8 @@
   )
   Post.create!(
   user_id: "1",
-  category_id: "1",
   pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！！！！！！",
   post_image: File.open("app/assets/images/post_image/柴犬.jpg")
   )
-  

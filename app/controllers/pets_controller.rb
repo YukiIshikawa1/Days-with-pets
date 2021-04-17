@@ -1,7 +1,5 @@
 class PetsController < ApplicationController
   def new
-    @genre = Genre.where(user_id: current_user.id)
-    @category = Category.where(user_id: current_user.id)
     @pet = Pet.new
   end
 
@@ -9,7 +7,7 @@ class PetsController < ApplicationController
     @pet = Pet.new(pet_params)
     @pet.user = current_user
     if @pet.save
-      redirect_to pets_path(@pet.id), success: "登録しました"
+      redirect_to user_pet_path(@pet.id), success: "登録しました"
     else
       render "new", denger: "登録に失敗しました" 
     end  
@@ -46,7 +44,7 @@ class PetsController < ApplicationController
   
   #保存するテーブル名とカラム名
   def pet_params
-    params.require(:pet).permit(:pet_image,:name,:gender,:age, :genre_id, :category_id)
+    params.require(:pet).permit(:pet_image,:name,:gender,:age,:category,:genre)
   end
   
 end

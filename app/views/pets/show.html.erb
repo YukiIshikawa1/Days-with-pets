@@ -1,7 +1,7 @@
 
 <div class="container pt-5 text-center">
 
-  <h2>会員編集</h2>
+  <h2>ペット詳細</h2>
       
       <div class="row">
         <table>     
@@ -22,6 +22,20 @@
               <td><h4><%= @pet.name %></h4></td>
             </tr>
           </div>
+
+          <div class="form-group">  
+            <tr>
+              <th><h4>動物の種類</h4></th>
+              <td><h4><%= @pet.genre %></h4></td>
+            </tr>
+          </div>
+          
+          <div class="form-group">  
+            <tr>
+              <th><h4>動物の品種</h4></th>
+              <td><h4><%= @pet.category %></h4></td>
+            </tr>
+          </div>          
           
           <div class="form-group">  
             <tr>
@@ -46,7 +60,7 @@
           
           <div class="form-group">  
             <tr>
-              <th><%= link_to "会員ペット一覧",user_pets_path(@pet.user_id,@pet.id) , class:"btn btn-primary" %></th>
+              <th><%= link_to "会員ペット一覧",user_pets_path(@pet.user_id,@pet.id) ,class:"btn btn-primary" %></th>
             </tr>            
           </div>    
           

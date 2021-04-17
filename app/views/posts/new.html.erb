@@ -7,19 +7,12 @@
       <div class="row">
         
         <table>
-           
+          
           <tr>
             <th><%= f.label :pet_id, "ペットの名前" %></th>
             <td><%= f.collection_select :pet_id, @pet, :id, :name, prompt: "--選択してください--" , class:"form-control" %></td>
           </tr> 
         
-          <tr>
-            <th><%= f.label :category_id, "ペットの種類" %></th>
-            <td>
-              <%= f.collection_select :category_id, @parents, :id, :category, { include_blank: "---", selected:"" }, id:"category_form" %>　
-              <p>なければ<%= link_to "コチラから", new_category_path %></p>
-            </td>
-          </tr>    
           
           <tr>
             <th><%=f.label :image, "画像投稿" %></th>
