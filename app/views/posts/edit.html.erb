@@ -1,0 +1,61 @@
+
+<div class="container text-center pt-3">
+  <h2>投稿編集</h2>
+
+     <%= form_with model: @post,url:post_path(@post.id), method: :patch, local: true do |f| %>
+      <div class="row">
+        
+        <table>
+        
+        <div class="col-12 ">
+          <tr>
+            <th><%=f.label :title, "題名" %></th>
+            <td><%= f.text_field :title, placeholder:"タイトル" %></td>
+          </tr> 
+        </div>  
+        
+        <div class="col-12">
+          <tr>
+            <th><%=f.label :text, "本文" %></th>
+            <td><%= f.text_area :text, placeholder:"本文" %></td>
+          </tr> 
+        </div>
+        
+        <div class="col-12">
+          <tr>
+            <th><%= f.label :genre_id, "ペットの種類" %></th>
+            <td>
+              <%= f.collection_select :genre_id, Genre.all, :id, :animal_type, prompt: "--選択してください--" , class:"form-control" %>
+              <p>なければ<%= link_to "コチラから", new_genre_path %></p>
+            </td>
+          </tr> 
+        </div>
+        
+        <div class="col-12">
+          <tr>  
+            <th><%= f.label :category_id, "ペットの品種" %></th>
+            <td>
+              <%= f.collection_select :category_id, Category.all, :id, :category, prompt: "--選択してください--" , class:"form-control" %>　
+              <p>なければ<%= link_to "コチラから", new_category_path %></p>
+            </td>
+          </tr> 
+        </div>
+        
+        <div class="col-12">
+          <tr>
+            <th><%= f.submit "編集更新" , class:"btn btn-success mb-3" %></th>
+          </tr> 
+        </div>
+        
+        <div class="col-12">
+          <tr>
+            <th><%= link_to "詳細画面に戻る",post_path(@post.id), class:"btn btn-success" %>　　</th>
+            <th>　　　<%= link_to "一覧画面に戻る",posts_path, class:"btn btn-success" %></th>
+          </tr>  
+        </div>  
+        
+    </div>
+  </div>  
+  <% end %>
+</div>
+

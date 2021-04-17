@@ -1,0 +1,56 @@
+<h1>Pets#edit</h1>
+<p>Find me in app/views/pets/edit.html.erb</p>
+<div class="container pt-5 text-center">
+
+  <h2>会員編集</h2>
+      
+    <%= form_with model: @pet,url:pet_path(@pet.id), local: true do |f| %>
+      <div class="row">
+        <table>     
+          <tbody>
+            
+          <div class="form-group">
+            <tr>
+              <th>会員画像</th>
+              <td>
+                <%= f.attachment_field :pet_image, class: "form-control-file user_image" %>  
+              </td> 
+            </tr>
+          </div>  
+           
+          <div class="form-group">  
+            <tr>
+              <th>ペットの名前</th>
+              <td><%= f.text_field :name %></td>
+            </tr>
+          </div>
+          
+          <div class="form-group">  
+            <tr>
+              <th>性別</th>
+              <td><%= f.text_field :gender %></td>
+            </tr>
+          </div>
+          
+          <div class="form-group">  
+            <tr>
+              <th>年齢</th>
+              <td><%= f.text_field :age %></td>
+            </tr>            
+          </div>
+          
+          <div class="form-group">  
+            <tr>
+              <th>
+                <td><%= f.submit "編集更新" , class:"btn btn-success" %></td>
+              </th>
+            </tr>            
+          </div>
+          
+          </tbody>
+        </table>            
+      </div>
+ 
+      <% end %>
+      
+</div>

@@ -1,0 +1,49 @@
+<div class="container pt-5 text-center">
+
+  <h2>会員詳細</h2>
+      
+      <div class="row">
+        <table>     
+          <tbody>
+            
+          <div class="form-group">
+            <tr>
+              <th>会員画像</th>
+              <td>
+                <%=  attachment_image_tag @user, :user_image, :fill, 200, 200, fallback: "No_image.jpeg" ,size:"400x400" %>  
+              </td> 
+            </tr>
+          </div>  
+           
+          <div class="form-group">  
+            <tr>
+              <th><h4>名前</h4></th>
+              <td><h4><%= @user.name %></h4></td>
+            </tr>
+          </div>
+          
+          <div class="form-group">  
+            <tr>
+              <th><h4>ニックネーム</h4></th>
+              <td><h4><%= @user.nick_name %></h4></td>
+            </tr>
+          </div>
+          
+          <div class="form-group">  
+            <tr>
+              <th><%= link_to "投稿一覧",posts_path , class:"btn btn-primary" %></th>
+              <td><%= link_to "会員編集",edit_user_path(@user.id) , class:"btn btn-success" %></td>              
+            </tr>            
+          </div> 
+          
+          <div class="form-group">  
+            <tr>
+              <th><%= link_to "会員ペット一覧",pets_path , class:"btn btn-primary" %></th>
+            </tr>            
+          </div>    
+          
+          </tbody>
+        </table>            
+      </div>
+
+</div>
