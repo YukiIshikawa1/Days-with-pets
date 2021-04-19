@@ -1,4 +1,15 @@
 <div class="container text-center">
+<div class="error-text">
+  <% if @post.errors.any? %>
+    <h2><%= @post.errors.count %>件のエラーがあります </h2>
+      <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+  <% end %>  
+</div>
+
   <h2>新規投稿</h2>
     <p>ペットの登録はお済みですか？　登録してなければ<%= link_to "コチラ", new_user_pet_path(current_user) %></p>
     <p class="text-danger">＊ペットの登録は一番最初にしてください</p>
@@ -34,11 +45,13 @@
         
           <tr>
             <th><%= f.submit "新規投稿", class: "btn btn-outline-success" %></th>
-          </tr> 
-        
-    </div>
+            <td></td>
+          </tr>
+          
+          </table>
+        </div>
+      <% end %>
   </div>  
-  <% end %>
-</div>
+
 
   

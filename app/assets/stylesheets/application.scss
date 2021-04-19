@@ -56,3 +56,33 @@
   align-items: center;
   justify-content: center 
 }
+
+//ヘッダー
+header{
+  background:#FFFF99;
+  margin-bottom:30px;
+}
+
+.nav-item{
+   padding-left:30px;
+}
+
+
+//フッター
+footer{
+  background:#FFFF99;
+  text-align:center;
+  margin-top:50px;
+}
+h1{
+  text-align: center;
+  color:#008000;
+}
+.slides {
+	overflow: hidden;
+}
+.footer-text
+{
+  color:#228B22;
+  padding:10px;
+}

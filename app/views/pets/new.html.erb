@@ -1,4 +1,15 @@
 <div class="container">
+<div class="error-text">
+  <% if @pet.errors.any? %>
+    <h2><%= @pet.errors.count %>件のエラーがあります </h2>
+      <ul>
+        <% @pet.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+  <% end %>  
+</div>
+
   <div class="row">
     <%= form_with model: @pet,url:user_pets_path, local: true do |f| %>
       <div>

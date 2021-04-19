@@ -19,6 +19,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to post_path(@post.id), success: "投稿しました"
     else
+      @pet = Pet.where(user_id: current_user.id)
       render "new", denger: "投稿に失敗しました"
     end
   end
