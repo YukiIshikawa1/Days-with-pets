@@ -31,7 +31,7 @@
 
 ## 設計書
 ER図<br>
-<img width="811" alt="スクリーンショット 2021-04-14 17 40 57" src="https://user-images.githubusercontent.com/76931463/114680963-a9fbf500-9d48-11eb-9d14-0f702c31a80b.png"><br>
+<img width="659" alt="スクリーンショット 2021-04-20 17 27 48" src="https://user-images.githubusercontent.com/76931463/115363828-c2af5380-a1fd-11eb-9f27-d2527866cf88.png"><br>
 [テーブル定義書](https://docs.google.com/spreadsheets/d/1AXOetT3vub_R1mwqWN1IN-UJKMbqRrAPToK86SKtxrg/edit?usp=sharing)<br>
 [アプリケーション詳細設計](https://docs.google.com/spreadsheets/d/1euJvyeKfuEULVkYm4wigMHZH9mXNVaAH72hhnqL0nNQ/edit?usp=sharing)<br>
 
