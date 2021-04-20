@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 2021_04_12_034203) do
 
   create_table "pets", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "genre_id"
     t.string "genre", null: false
     t.string "category", null: false
     t.string "name", null: false
@@ -39,7 +38,6 @@ ActiveRecord::Schema.define(version: 2021_04_12_034203) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "category_id"
-    t.index ["genre_id"], name: "index_pets_on_genre_id"
     t.index ["user_id"], name: "index_pets_on_user_id"
   end
 

@@ -7,7 +7,7 @@ class PetsController < ApplicationController
     @pet = Pet.new(pet_params)
     @pet.user = current_user
     if @pet.save
-      redirect_to user_pet_path(@pet.id), success: "登録しました"
+      redirect_to user_pet_path(current_user, @pet.id), success: "登録しました"
     else
       render "new", denger: "登録に失敗しました" 
     end  
@@ -30,7 +30,7 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
     @pet.user.id = current_user.id
     if @pet.update(pet_params)
-      redirect_to pet_path(@pet.id), success: "編集しました"
+      redirect_to user_pet_path(current_user,@pet.id), success: "編集しました"
     else
     @pet = Pet.find(params[:id])
     render "edit"
@@ -38,6 +38,9 @@ class PetsController < ApplicationController
   end
 
   def destroy
+    @pet = Pet.find(params[:id])
+    @pet.destroy
+    redirect_to user_pets_path(@pet.user_id,@pet.id)
   end
   
   private

@@ -4,14 +4,14 @@
   <h2>ペット詳細</h2>
       
       <div class="row">
-        <table>     
+        <table class="table">     
           <tbody>
             
           <div class="form-group">
             <tr>
-              <th>会員画像</th>
+              <th>ペット画像</th>
               <td>
-                <%= attachment_image_tag @pet, :pet_image, size:"200x200" %>  
+                <%= attachment_image_tag @pet, :pet_image, size:"400x400" %>  
               </td> 
             </tr>
           </div>  
@@ -54,7 +54,12 @@
           <div class="form-group">  
             <tr>
               <th><%= link_to "投稿一覧",posts_path , class:"btn btn-primary" %></th>
-              <td><%= link_to "ペット編集",edit_user_pet_path(@pet.user_id,@pet.id) , class:"btn btn-success" %></td>              
+              <% if current_user == @pet.user %>
+              <td>
+                <%= link_to "ペット編集",edit_user_pet_path(@pet.user_id,@pet.id) , class:"btn btn-success" %>
+                <%= link_to "削除", user_pet_path(current_user,@pet.id), method: :delete, data:{confirm: "本当に削除しますか？"}, class: "btn btn-danger destroy_pet_#{@pet.id}" %>
+              </td>             
+              <% end %>    
             </tr>            
           </div> 
           

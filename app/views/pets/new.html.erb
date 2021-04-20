@@ -18,7 +18,10 @@
           <tr>
             <th><%= f.label :genre, "ペットの種類" %></th>
             <td>ペットの種類を入力してください (例：犬、猫など)
-              <%= f.text_field :genre, placeholder:"種類" %>　
+            <td>
+              <%= f.select :genre, {"犬":1, "猫":2, "鳥類":3, },
+              { include_blank: true, selected: @pet.genre },class: "change-pet"%>
+              <%= f.text_field :genre, placeholder:"品種" %>　 
             </td>
           </tr>  
           

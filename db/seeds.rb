@@ -10,7 +10,7 @@
   nick_name: "太郎",
   email: "aaaaa@aaa.com",
   password: "password",
-  user_image: File.open("app/assets/images/user_image/sakana.jpeg") 
+  user_image: File.open("app/assets/images/sakana.jpeg") 
   )
   
   Pet.create!(
@@ -20,7 +20,7 @@
   name: "太郎１",
   gender: "男の子",
   age: "5",
-  pet_image: File.open("app/assets/images/pet_image/雑種.jpg")
+  pet_image: File.open("app/assets/images/dog1.jpg")
   )
   
   Post.create!(
@@ -28,40 +28,40 @@
   pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！",
-  post_image: File.open("app/assets/images/post_image/チワワ.jpg")
+  post_image: File.open("app/assets/images/dog2.jpg")
   )
   Post.create!(
   user_id: "1",
   pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！！",
-  post_image: File.open("app/assets/images/post_image/ゴールデンレトリバー.jpg")
+  post_image: File.open("app/assets/images/dog3.jpg")
   )
   Post.create!(
   user_id: "1",
   pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！！！",
-  post_image: File.open("app/assets/images/post_image/シベリアン・ハスキー.jpg")
+  post_image: File.open("app/assets/images/dog4.jpg")
   )
   Post.create!(
   user_id: "1",
   pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！！！！",
-  post_image: File.open("app/assets/images/post_image/トイプードル.jpg")
+  post_image: File.open("app/assets/images/dog5.jpg")
   )
   Post.create!(
   user_id: "1",
   pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！！！！！",
-  post_image: File.open("app/assets/images/post_image/トイプードル２.jpg")
+  post_image: File.open("app/assets/images/dog6.jpg")
   )
   Post.create!(
   user_id: "1",
   pet_id: "1",
   title: "日常風景",
   text: "日常の中で取れた１枚です！！！！！！",
-  post_image: File.open("app/assets/images/post_image/柴犬.jpg")
+  post_image: File.open("app/assets/images//dog7.jpg")
   )
