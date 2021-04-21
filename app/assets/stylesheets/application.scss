@@ -45,26 +45,24 @@
   top: 300px
 }
 .previews{
-    width:600px;
+    width:400px;
     height:400px;
     margin:0 auto;
 }
 .bg-slider {
-	width: 100vw;
-	height: 100vh;
-	background-position:center center;
-	background-size: cover;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.bg-slider__title{
-	color: #fff;
-	font-size: 48px;
-	line-height: 1.5;
-	font-weight: bold;
-	text-align:center;
-	text-shadow: 1px 1px 1px #000;
+.bg-slider-title{
+  text-align:center;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
 }
  //一覧ページ
 .paginate{

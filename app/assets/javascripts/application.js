@@ -20,6 +20,7 @@
 //= require_tree .
 
 
+
 $(function() {
   $('.slider').slick({
       centerMode: true, //スライド画面に次のスライドが表示される
