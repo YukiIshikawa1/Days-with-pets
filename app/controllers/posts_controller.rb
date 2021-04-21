@@ -12,10 +12,6 @@ class PostsController < ApplicationController
   def new
     @post = Post.new  
     @pet = Pet.where(user_id: current_user.id)
-    @genre = Genre.where(user_id: current_user.id)
-    @category = Category.where(user_id: current_user.id)
-    
-  
   end
 
   def create
@@ -23,6 +19,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to post_path(@post.id), success: "投稿しました"
     else
+      @pet = Pet.where(user_id: current_user.id)
       render "new", denger: "投稿に失敗しました"
     end
   end
@@ -36,8 +33,6 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @genre = Genre.find(@post.genre_id)
-    @category = Category.find(@post.category_id)
     @pet = Pet.find(@post.pet_id)
     @user = User.find(@post.user_id)
     @comment = Comment.new
@@ -64,7 +59,7 @@ class PostsController < ApplicationController
   
   private
   def post_params
-    params.require(:post).permit(:post_image,:title,:text,:genre_id,:category_id,:pet_id)
+    params.require(:post).permit(:post_image,:title,:text,:pet_id)
   end  
   
 end

@@ -3,8 +3,6 @@ class Post < ApplicationRecord
   has_many :favorites, dependent: :destroy
 
 
-  belongs_to :genre
-  belongs_to :category
   belongs_to :user
   belongs_to :pet, optional: true
 

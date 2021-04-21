@@ -45,9 +45,24 @@
   top: 300px
 }
 .previews{
-    width:600px;
+    width:400px;
     height:400px;
     margin:0 auto;
+}
+.bg-slider {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bg-slider-title{
+  text-align:center;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
 }
  //一覧ページ
 .paginate{
@@ -55,4 +70,34 @@
   display: flex;
   align-items: center;
   justify-content: center 
+}
+
+//ヘッダー
+header{
+  background:#FFFF99;
+  margin-bottom:30px;
+}
+
+.nav-item{
+   padding-left:30px;
+}
+
+
+//フッター
+footer{
+  background:#FFFF99;
+  text-align:center;
+  margin-top:50px;
+}
+h1{
+  text-align: center;
+  color:#008000;
+}
+.slides {
+	overflow: hidden;
+}
+.footer-text
+{
+  color:#228B22;
+  padding:10px;
 }

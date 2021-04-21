@@ -1,17 +1,17 @@
 
 <div class="container pt-5 text-center">
 
-  <h2>会員編集</h2>
+  <h2>ペット詳細</h2>
       
       <div class="row">
-        <table>     
+        <table class="table">     
           <tbody>
             
           <div class="form-group">
             <tr>
-              <th>会員画像</th>
+              <th>ペット画像</th>
               <td>
-                <%= attachment_image_tag @pet, :pet_image, size:"200x200" %>  
+                <%= attachment_image_tag @pet, :pet_image, size:"400x400" %>  
               </td> 
             </tr>
           </div>  
@@ -22,6 +22,20 @@
               <td><h4><%= @pet.name %></h4></td>
             </tr>
           </div>
+
+          <div class="form-group">  
+            <tr>
+              <th><h4>動物の種類</h4></th>
+              <td><h4><%= @pet.genre %></h4></td>
+            </tr>
+          </div>
+          
+          <div class="form-group">  
+            <tr>
+              <th><h4>動物の品種</h4></th>
+              <td><h4><%= @pet.category %></h4></td>
+            </tr>
+          </div>          
           
           <div class="form-group">  
             <tr>
@@ -40,13 +54,18 @@
           <div class="form-group">  
             <tr>
               <th><%= link_to "投稿一覧",posts_path , class:"btn btn-primary" %></th>
-              <td><%= link_to "ペット編集",edit_pet_path(@pet.id) , class:"btn btn-success" %></td>              
+              <% if current_user == @pet.user %>
+              <td>
+                <%= link_to "ペット編集",edit_user_pet_path(@pet.user_id,@pet.id) , class:"btn btn-success" %>
+                <%= link_to "削除", user_pet_path(current_user,@pet.id), method: :delete, data:{confirm: "本当に削除しますか？"}, class: "btn btn-danger destroy_pet_#{@pet.id}" %>
+              </td>             
+              <% end %>    
             </tr>            
           </div> 
           
           <div class="form-group">  
             <tr>
-              <th><%= link_to "会員ペット一覧",pets_path , class:"btn btn-primary" %></th>
+              <th><%= link_to "会員ペット一覧",user_pets_path(@pet.user_id,@pet.id) ,class:"btn btn-primary" %></th>
             </tr>            
           </div>    
           

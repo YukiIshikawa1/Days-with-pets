@@ -1,44 +1,47 @@
   
 <div class="container">
-   <h2>新規登録</h2>
   <div class="row">
-
-
+   <div class="col-md-11 offset-md-1">
+    <h2>新規登録</h2>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-  <div class="field m-3">
+  <div class="field ">
     <%= f.label :"名前" %><br />
-    <%= f.text_field :name, autofocus: true %>
+    <%= f.text_field :name, autofocus: true, class: "form-control col-md-4 col-md-offset-2" %>
   </div>
   
-  <div class="field m-3">
+  <div class="field ">
     <%= f.label :"ニックネーム" %><br />
-    <%= f.text_field :nick_name %>
+    <%= f.text_field :nick_name, class: "form-control col-md-4 col-md-offset-2" %>
   </div>
   
-  <div class="field m-3">
+  <div class="field ">
     <%= f.label :"メールアドレス" %><br />
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class: "form-control col-md-4 col-md-offset-2" %>
   </div>
 
-  <div class="field m-3">
+  <div class="field ">
     <%= f.label :"パスワード" %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> 文字以上)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", class: "form-control col-md-4 col-md-offset-2" %>
   </div>
 
-  <div class="field m-3">
+  <div class="field ">
     <%= f.label :"パスワード確認" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control col-md-4 col-md-offset-2" %>
   </div>
 
-  <div class="actions m-3">
-    <%= f.submit "Sign up" %>
+  <div class="actions mt-3">
+    <%= f.submit "Sign up", class: "btn btn-outline-success" %>
+
+  <div class="m-3">
+    <p>会員登録をしていれば<%= link_to "こちら" ,new_session_path(resource_name) %></p>
+  </div>    
+    
   </div>
 <% end %>
 </div>
-
-<%= render "devise/shared/links" %>
+</div>
 </div>

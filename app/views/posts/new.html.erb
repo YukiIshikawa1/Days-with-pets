@@ -1,6 +1,17 @@
 <div class="container text-center">
+<div class="error-text">
+  <% if @post.errors.any? %>
+    <h2><%= @post.errors.count %>件のエラーがあります </h2>
+      <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+  <% end %>  
+</div>
+
   <h2>新規投稿</h2>
-    <p>ペットの登録はお済みですか？　登録してなければ<%= link_to "コチラ", new_pet_path %></p>
+    <p>ペットの登録はお済みですか？　登録してなければ<%= link_to "コチラ", new_user_pet_path(current_user) %></p>
     <p class="text-danger">＊ペットの登録は一番最初にしてください</p>
 
      <%= form_with model: @post,url:posts_path, local: true do |f| %>
@@ -13,21 +24,6 @@
             <td><%= f.collection_select :pet_id, @pet, :id, :name, prompt: "--選択してください--" , class:"form-control" %></td>
           </tr> 
         
-          <tr>
-            <th><%= f.label :genre_id, "ペットの種類" %></th>
-            <td>
-              <%= f.collection_select :genre_id, @genre, :id, :animal_type, prompt: "--選択してください--" , class:"form-control" %>
-              <p>なければ<%= link_to "コチラから", new_genre_path %></p>
-            </td>
-          </tr> 
-        
-          <tr>
-            <th><%= f.label :category_id, "ペットの品種" %></th>
-            <td>
-              <%= f.collection_select :category_id, @category, :id, :category, prompt: "--選択してください--" , class:"form-control" %>　
-              <p>なければ<%= link_to "コチラから", new_category_path %></p>
-            </td>
-          </tr>           
           
           <tr>
             <th><%=f.label :image, "画像投稿" %></th>
@@ -49,11 +45,13 @@
         
           <tr>
             <th><%= f.submit "新規投稿", class: "btn btn-outline-success" %></th>
-          </tr> 
-        
-    </div>
+            <td></td>
+          </tr>
+          
+          </table>
+        </div>
+      <% end %>
   </div>  
-  <% end %>
-</div>
+
 
   

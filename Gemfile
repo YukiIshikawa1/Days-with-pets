@@ -80,3 +80,10 @@ gem 'font-awesome-sass', '~> 5.13'
 gem 'rubocop', require: false
 gem 'rubocop-rails', require: false
 gem 'sprockets'
+gem 'ancestry'
+gem 'rails-i18n'
+
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
