@@ -19,6 +19,8 @@
 @import "slick-theme"; 
 @import "slick";
 
+
+
 .slick-next {
     right: 10px !important;
     z-index: 100;
@@ -28,42 +30,80 @@
     left: 10px !important;
   z-index: 100;
  }
-//  top画面
-.fa-arrow-alt-circle-left {
-  font-size: 50px;
+ 
+//aboutページ
+
+.about-herder{ 
   position: absolute;
-  z-index: 100;
-  left: -100px;
-  top: 300px;
+  display: block;
+  width: 960px;
+  background: #fff;
+  opacity: 0.6;
+  padding: 10px;
+  bottom: 300px;
+  left: 200px;
+  line-height: 20px;
+  letter-spacing: 5px;
+  font-size: 25px;
+  color:#008800;
+  }
+ p.about-herder {line-height: 40px;}
+//  top画面
+
+.top-herder{
+  position: absolute;
+  display: block;
+  width: 960px;
+  background: #fff;
+  opacity: 0.7;
+  padding: 10px;
+  bottom: 500px;
+  left: 200px;
+ }
+.full div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+}
+.full div.img01 {
+ background-image: image-url("/images/cat1.jpg")
+}
+.full div.img02 {
+ background-image: image-url("/images/dog10.jpg")
+}
+.full div.img03 {
+ background-image: image-url("/images/cat5.jpg")
+}
+.full div.img04 {
+ background-image: image-url("/images/dog14.jpg")
+}
+.full div.img05 {
+ background-image: image-url("/images/cat3.jpg")
+}
+.full div.img06 {
+ background-image: image-url("/images/dog17.jpg")
+}
+.full div.img07 {
+ background-image: image-url("/images/dog13.jpg")
+}
+.full div.img08 {
+ background-image: image-url("/images/cat9.jpg")
+}
+.full div.img09 {
+ background-image: image-url("/images/dog16.jpg")
+}
+.full div.img10 {
+ background-image: image-url("/images/cat7.jpg")
+}
+.full div.img11 {
+ background-image: image-url("/images/dog15.jpg")
+}
+.full div.img12 {
+ background-image: image-url("/images/cat2.jpg")
 }
 
-.fa-arrow-alt-circle-right {
-  font-size: 50px;
-  position: absolute;
-  z-index: 100;
-  right: -100px;
-  top: 300px
-}
-.previews{
-    width:400px;
-    height:400px;
-    margin:0 auto;
-}
-.bg-slider {
-  width: 100vw;
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.bg-slider-title{
-  text-align:center;
-  color: #fff;
-  font-size: 32px;
-  font-weight: bold;
-}
  //一覧ページ
 .paginate{
   height: 10em;
@@ -71,11 +111,20 @@
   align-items: center;
   justify-content: center 
 }
+.index-background{
+  background-image: image-url("/images/background1.jpg");
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-size: auto;
+  background-color: rgb(255, 255, 255) !important;
+}
+
 
 //ヘッダー
 header{
   background:#FFFF99;
-  margin-bottom:30px;
 }
 
 .nav-item{
@@ -87,7 +136,6 @@ header{
 footer{
   background:#FFFF99;
   text-align:center;
-  margin-top:50px;
 }
 h1{
   text-align: center;
