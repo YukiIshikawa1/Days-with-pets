@@ -35,7 +35,7 @@ table th {/*table内のthに対して*/
  
  //ログイン関係
  .rog-bg{
-  background-image: image-url("/images/background3.jpg");
+  background-image: image-url("background3.jpg");
   position: relative;
   width: 100%;
   min-height: 70vh;
@@ -53,7 +53,7 @@ header{
    padding-left:30px;
 }
 .herder-background{
-  background-image: image-url("/images/background1.jpg");
+  background-image: image-url("background1.jpg");
   position: relative;
   height: 100%;
   background-size: auto;
@@ -78,7 +78,7 @@ h1{
   padding:10px;
 }
 .footer-background{
-  background-image: image-url("/images/background1.jpg");
+  background-image: image-url("background1.jpg");
   position: relative;
   height: 100%;
   background-size: auto;
@@ -136,40 +136,40 @@ h1{
 
 }
 .full div.img01 {
- background-image: image-url("/images/cat1.jpg")
+ background-image: image-url("cat1.jpg")
 }
 .full div.img02 {
- background-image: image-url("/images/dog10.jpg")
+ background-image: image-url("dog10.jpg")
 }
 .full div.img03 {
- background-image: image-url("/images/cat5.jpg")
+ background-image: image-url("cat5.jpg")
 }
 .full div.img04 {
- background-image: image-url("/images/dog14.jpg")
+ background-image: image-url("dog14.jpg")
 }
 .full div.img05 {
- background-image: image-url("/images/cat3.jpg")
+ background-image: image-url("cat3.jpg")
 }
 .full div.img06 {
- background-image: image-url("/images/dog17.jpg")
+ background-image: image-url("dog17.jpg")
 }
 .full div.img07 {
- background-image: image-url("/images/dog13.jpg")
+ background-image: image-url("dog13.jpg")
 }
 .full div.img08 {
- background-image: image-url("/images/cat9.jpg")
+ background-image: image-url("cat9.jpg")
 }
 .full div.img09 {
- background-image: image-url("/images/dog16.jpg")
+ background-image: image-url("dog16.jpg")
 }
 .full div.img10 {
- background-image: image-url("/images/cat7.jpg")
+ background-image: image-url("cat7.jpg")
 }
 .full div.img11 {
- background-image: image-url("/images/dog15.jpg")
+ background-image: image-url("dog15.jpg")
 }
 .full div.img12 {
- background-image: image-url("/images/cat2.jpg")
+ background-image: image-url("cat2.jpg")
 }
 
  //一覧ページ
@@ -180,7 +180,7 @@ h1{
   justify-content: center 
 }
 .index-background{
-  background-image: image-url("/images/background1.jpg");
+  background-image: image-url("background1.jpg");
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -200,7 +200,7 @@ h1{
 
 //投稿詳細
 .show-background{
-  background-image: image-url("/images/background1.jpg");
+  background-image: image-url("background1.jpg");
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -213,7 +213,7 @@ h1{
 
 //投稿画面
 .new-background{
-  background-image: image-url("/images/background2.jpg");
+  background-image: image-url("background2.jpg");
   position: relative;
   width: 100%;
   min-height: 70vh;
@@ -230,7 +230,7 @@ h1{
 //投稿編集画面
 
 .post-edit-bg{
-  background-image: image-url("/images/background2.jpg");
+  background-image: image-url("background2.jpg");
   position: relative;
   width: 100%;
   min-height: 70vh;
@@ -241,7 +241,7 @@ h1{
 
 //follo画面
 .follo-bg{
-  background-image: image-url("/images/background2.jpg");
+  background-image: image-url("background2.jpg");
   position: relative;
   width: 100%;
   height: 100%;
@@ -251,7 +251,7 @@ h1{
 
 //会員編集画面 会員詳細画面
 .user-show-edit-bg{
-  background-image: image-url("/images/background3.jpg");
+  background-image: image-url("background3.jpg");
   position: relative;
   width: 100%;
   min-height: 70vh;
@@ -267,7 +267,7 @@ h1{
   padding-top: 100px;
 }
 .pet-new-bg{
-  background-image: image-url("/images/background3.jpg");
+  background-image: image-url("background3.jpg");
   position: relative;
   width: 100%;
   min-height: 70vh;
@@ -277,7 +277,7 @@ h1{
 }
 //ペット詳細
 .pet-show-bg{
-  background-image: image-url("/images/background3.jpg");
+  background-image: image-url("background3.jpg");
   position: relative;
   width: 100%;
   min-height: 70vh;
