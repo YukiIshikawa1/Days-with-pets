@@ -39,7 +39,7 @@
                 <li class="comment-container">
                     <div class="comment-box">
                         <div class="comment-avatar">
-                            <%= attachment_image_tag comment.user, :user_image, fallback: "No_image.jpg", class:"comment-image", size: "40x40" %>
+                            <%= attachment_image_tag comment.user, :user_image, fallback: "No_image.jpg", class:"comment-image", size: "100x100" %>
                         </div>
                         <div class="comment-text">
                             <p><%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %></p>

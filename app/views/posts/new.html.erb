@@ -1,14 +1,16 @@
-<div class="container text-center">
-<div class="error-text">
-  <% if @post.errors.any? %>
-    <h2><%= @post.errors.count %>件のエラーがあります </h2>
-      <ul>
-        <% @post.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-  <% end %>  
-</div>
+<div class="new-background">
+<div class="container-new-edit">
+  
+       <div class="error-text">
+         <% if @post.errors.any? %>
+           <h2><%= @post.errors.count %>件のエラーがあります </h2>
+             <ul>
+               <% @post.errors.full_messages.each do |message| %>
+                 <li><%= message %></li>
+               <% end %>
+             </ul>
+         <% end %>  
+       </div>
 
   <h2>新規投稿</h2>
     <p>ペットの登録はお済みですか？　登録してなければ<%= link_to "コチラ", new_user_pet_path(current_user) %></p>
@@ -44,7 +46,7 @@
 
         
           <tr>
-            <th><%= f.submit "新規投稿", class: "btn btn-outline-success" %></th>
+            <th><%= f.submit "新規投稿", class: "btn btn-success btn-lg " %></th>
             <td></td>
           </tr>
           
@@ -52,6 +54,7 @@
         </div>
       <% end %>
   </div>  
+  </div>
 
 
   

@@ -4,7 +4,7 @@ class Post < ApplicationRecord
 
 
   belongs_to :user
-  belongs_to :pet, optional: true
+  belongs_to :pet
 
   attachment :post_image 
 

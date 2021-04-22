@@ -1,36 +1,47 @@
-<div class="container">
-<div class="error-text">
-  <% if @pet.errors.any? %>
-    <h2><%= @pet.errors.count %>件のエラーがあります </h2>
-      <ul>
-        <% @pet.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-  <% end %>  
-</div>
+<div class="pet-new-bg">
+  <div class="container-pet-new">
+  
+      <div class="error-text">
+        <% if @pet.errors.any? %>
+          <h2><%= @pet.errors.count %>件のエラーがあります </h2>
+            <ul>
+              <% @pet.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+        <% end %>  
+      </div>
 
-  <div class="row">
+
+    <h2>新規ペット登録</h2>
     <%= form_with model: @pet,url:user_pets_path, local: true do |f| %>
-      <div>
+ 　    <div class="row">
         
         <table>
+          
           <tr>
             <th><%= f.label :genre, "ペットの種類" %></th>
-            <td>ペットの種類を入力してください (例：犬、猫など)
             <td>
-              <%= f.select :genre, {"犬":1, "猫":2, "鳥類":3, },
-              { include_blank: true, selected: @pet.genre },class: "change-pet"%>
-              <%= f.text_field :genre, placeholder:"品種" %>　 
+              ペットの種類を入力してください (例：犬、猫など)
+             　 
             </td>
           </tr>  
+          <tr>
+            <th></th>
+            <td> <%= f.text_field :genre, placeholder:"動物の種類" %></td>
+          </tr>
           
           <tr>
             <th><%= f.label :category, "ペットの品種" %></th>
-            <td>ペットに品種を入れてください(犬なら　例：チワワ、ダックスフンドなど)
-              <%= f.text_field :category, placeholder:"品種" %>　
+            <td>
+              ペットに品種を入れてください(犬なら　例：チワワ、ダックスフンドなど)
             </td>
-          </tr>            
+          </tr> 
+
+          <tr>
+            <th></th>
+            <td> <%= f.text_field :category, placeholder:"選んだ動物の品種" %>　</td>
+          </tr>          
           
           <tr>
             <th><%= f.label :image, "ペット画像" %></th>
@@ -49,16 +60,16 @@
           
           <tr>
             <th><%= f.label :age, "ペットの歳" %></th>
-            <td><%= f.select :age, {"1":1, "2":2, "3":3, "4":4, "5":5, "6":6, "7":7, "8":8, "9":9, "10":10, "11":11, "12":12, "13":13, "14":14, "15":15},
-                    { include_blank: true, selected: @pet.age },
-                    class: "change-pet"%>
+            <td>
+              <%= f.select :age, {"1":1, "2":2, "3":3, "4":4, "5":5, "6":6, "7":7, "8":8, "9":9, "10":10, "11":11, "12":12, "13":13, "14":14, "15":15,
+                                  "16":16, "17":17, "18":18, "19":19, "20":20, "21":21, "22":22, "23":23, "24":24, "25":25, "26":26, "27":27, "28":28, "29":29, "30":30},
+                { include_blank: true, selected: @pet.age },class: "change-pet"%>歳
             </td>
           </tr> 
-        
-    
-          
+      
           <tr>
-            <th><%= f.submit "新規投稿", class: "btn btn-outline-success" %></th>
+            <th></th>
+            <td><%= f.submit "新規投稿", class: "btn btn-success btn-lg" %></td>
           </tr>           
           
         </table>
@@ -66,4 +77,4 @@
     　</div>
     　<% end %>
   </div>
-</div>
+</div>  

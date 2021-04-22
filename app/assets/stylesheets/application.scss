@@ -20,7 +20,9 @@
 @import "slick";
 
 
-
+table th {/*table内のthに対して*/
+  padding: 10px;/*上下左右10pxずつ*/
+}
 .slick-next {
     right: 10px !important;
     z-index: 100;
@@ -31,6 +33,57 @@
   z-index: 100;
  }
  
+ //ログイン関係
+ .rog-bg{
+  background-image: image-url("/images/background3.jpg");
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  height: 100%;
+  background-size: auto;
+  background-color: rgb(255, 255, 255) !important;
+}
+
+ //ヘッダー
+header{
+  background:#FFFF99;
+}
+
+.nav-item{
+   padding-left:30px;
+}
+.herder-background{
+  background-image: image-url("/images/background1.jpg");
+  position: relative;
+  height: 100%;
+  background-size: auto;
+  background-color: rgb(255, 255, 255) !important;
+}
+
+//フッター
+footer{
+  background:#FFFF99;
+  text-align:center;
+}
+h1{
+  text-align: center;
+  color:#008000;
+}
+.slides {
+	overflow: hidden;
+}
+.footer-text
+{
+  color:#228B22;
+  padding:10px;
+}
+.footer-background{
+  background-image: image-url("/images/background1.jpg");
+  position: relative;
+  height: 100%;
+  background-size: auto;
+  background-color: rgb(255, 255, 255) !important;
+}
 //aboutページ
 
 .about-herder{ 
@@ -39,13 +92,16 @@
   width: 960px;
   background: #fff;
   opacity: 0.6;
-  padding: 10px;
-  bottom: 300px;
+  padding: 20px;
+  bottom: 200px;
   left: 200px;
   line-height: 20px;
   letter-spacing: 5px;
   font-size: 25px;
   color:#008800;
+  line-height: 1.5;
+  font-weight: bold;
+  font-family: "ＭＳ ゴシック",sans-serif; 
   }
  p.about-herder {line-height: 40px;}
 //  top画面
@@ -58,6 +114,18 @@
   opacity: 0.7;
   padding: 10px;
   bottom: 500px;
+  left: 200px;
+  line-height: 1.5;
+  font-weight: bold;
+  font-family: "ＭＳ ゴシック",sans-serif; 
+ }
+ 
+ .top-rog{
+  position: absolute;
+  display: block;
+  width: 960px;
+  padding: 10px;
+  bottom: 400px;
   left: 200px;
  }
 .full div {
@@ -121,31 +189,104 @@
   background-color: rgb(255, 255, 255) !important;
 }
 
-
-//ヘッダー
-header{
-  background:#FFFF99;
+//kaminariの設定
+.pagination {
+  justify-content: center;
+}
+.pagination > span{
+ padding: 12px 24px;
+ margin: 0 10px;
 }
 
-.nav-item{
-   padding-left:30px;
+//投稿詳細
+.show-background{
+  background-image: image-url("/images/background1.jpg");
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-size: auto;
+  background-color: rgb(255, 255, 255) !important;
 }
 
 
-//フッター
-footer{
-  background:#FFFF99;
-  text-align:center;
+
+//投稿画面
+.new-background{
+  background-image: image-url("/images/background2.jpg");
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  height: 100%;
+  background-size: auto;
+  background-color: rgb(255, 255, 255) !important;
 }
-h1{
+.container-new-edit{
   text-align: center;
-  color:#008000;
+  top: 100px;
+  padding-top: 100px;
 }
-.slides {
-	overflow: hidden;
+
+//投稿編集画面
+
+.post-edit-bg{
+  background-image: image-url("/images/background2.jpg");
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  height: 100%;
+  background-size: auto;
+  background-color: rgb(255, 255, 255) !important;
 }
-.footer-text
-{
-  color:#228B22;
-  padding:10px;
+
+//follo画面
+.follo-bg{
+  background-image: image-url("/images/background2.jpg");
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: auto;
+  background-color: rgb(255, 255, 255) !important;
+}
+
+//会員編集画面 会員詳細画面
+.user-show-edit-bg{
+  background-image: image-url("/images/background3.jpg");
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  height: 100%;
+  background-size: auto;
+  background-color: rgb(255, 255, 255) !important;
+}
+
+//ペット登録画面
+.container-pet-new{
+   text-align: center;
+  top: 100px;
+  padding-top: 100px;
+}
+.pet-new-bg{
+  background-image: image-url("/images/background3.jpg");
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  height: 100%;
+  background-size: auto;
+  background-color: rgb(255, 255, 255) !important;
+}
+//ペット詳細
+.pet-show-bg{
+  background-image: image-url("/images/background3.jpg");
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  height: 100%;
+  background-size: auto;
+  background-color: rgb(255, 255, 255) !important;
+}
+.pet-image{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }

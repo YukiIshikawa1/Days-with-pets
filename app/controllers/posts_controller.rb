@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:top, :about, :index]
+  before_action :ensure_current_user, only: [:edit,:update,:destroy]
   
   def top
     @posts = Post.all
@@ -41,6 +42,7 @@ class PostsController < ApplicationController
   
   def edit
     @post = Post.find(params[:id])  
+    @pet = Pet.where(user_id: current_user.id)
   end
 
   def update
@@ -58,8 +60,16 @@ class PostsController < ApplicationController
   end
   
   private
+  
   def post_params
     params.require(:post).permit(:post_image,:title,:text,:pet_id)
   end  
+  
+  def ensure_current_user
+    @post = Post.find(params[:id])
+    unless @post.user == current_user
+      redirect_to posts_path
+    end
+  end
   
 end
