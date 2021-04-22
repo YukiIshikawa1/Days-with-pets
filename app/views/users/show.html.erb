@@ -1,3 +1,4 @@
+<div class="user-show-edit-bg">
 <div class="container pt-5 text-center">
 
   <h2><i class="fas fa-user"></i>会員詳細</h2>
@@ -10,7 +11,7 @@
             <tr>
               <th><i class="fas fa-image"></i>会員画像</th>
               <td>
-                <%=  attachment_image_tag @user, :user_image, :fill, 200, 200, fallback: "No_image.jpeg" ,size:"400x400" %>  
+                <%=  attachment_image_tag @user, :user_image, fallback: "No_image.jpeg" ,size:"300x300",class: 'pet-image'%>  
               </td> 
             </tr>
           </div>  
@@ -31,7 +32,7 @@
           
           <div class="form-group">  
             <tr>
-              <th><%= link_to "投稿一覧",posts_path , class:"btn btn-primary" %></th>
+              <th><%= link_to "投稿一覧に戻る",posts_path , class:"btn btn-primary" %></th>
               <% if current_user == @user %>
                 <td><%= link_to "会員編集",edit_user_path(@user.id), class:"btn btn-success" %></td>   
               <% end %>
@@ -47,5 +48,5 @@
           </tbody>
         </table>            
       </div>
-
+  </div>
 </div>

@@ -3,7 +3,7 @@
   <tr>
     <th>
       <%= link_to user_path(user.id) do %>
-        <%= attachment_image_tag user, :user_image, :fill, 100, 100, fallback: "No_image.jpeg" ,size:"100x100"%>
+        <%= attachment_image_tag user, :user_image, fallback: "No_image.jpeg" ,size:"100x100" ,class: 'pet-image' %>
       <% end %>  
     </th>
     <td>

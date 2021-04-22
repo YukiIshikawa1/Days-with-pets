@@ -1,4 +1,4 @@
-
+<div class="pet-show-bg">
 <div class="container pt-5 text-center">
 
   <h2>ペット詳細</h2>
@@ -11,7 +11,7 @@
             <tr>
               <th>ペット画像</th>
               <td>
-                <%= attachment_image_tag @pet, :pet_image, size:"400x400" %>  
+                <%= attachment_image_tag @pet, :pet_image, size:"500x500" ,class: 'pet-image' %>  
               </td> 
             </tr>
           </div>  
@@ -72,5 +72,5 @@
           </tbody>
         </table>            
       </div>
-
+  </div>
 </div>

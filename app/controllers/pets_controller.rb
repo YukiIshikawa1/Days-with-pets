@@ -1,4 +1,6 @@
 class PetsController < ApplicationController
+  before_action :ensure_current_user, only: [:edit,:update,:destroy]
+  
   def new
     @pet = Pet.new
   end
@@ -48,6 +50,13 @@ class PetsController < ApplicationController
   #保存するテーブル名とカラム名
   def pet_params
     params.require(:pet).permit(:pet_image,:name,:gender,:age,:category,:genre)
+  end
+  
+  def ensure_current_user
+    @pet = Pet.find(params[:id])
+    unless @pet.user == current_user
+      redirect_to user_pets_path
+    end
   end
   
 end
