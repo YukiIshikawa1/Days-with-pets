@@ -26,13 +26,16 @@ class PostsController < ApplicationController
   end
 
   def index
+    @posts_favorite = Post.find(Favorite.group(:post_id).order('count(post_id) desc').limit(10).pluck(:post_id))
     @posts = Post.all.page(params[:page]).per(5)
+    @user1 = User.find_by(params[:id])
     if user_signed_in?
-    @user = User.find(current_user.id)
+      @user = User.find(current_user.id)
     end
   end
 
   def show
+    @posts_favorite = Post.find(Favorite.group(:post_id).order('count(post_id) desc').limit(10).pluck(:post_id))
     @post = Post.find(params[:id])
     @pet = Pet.find(@post.pet_id)
     @user = User.find(@post.user_id)

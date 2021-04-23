@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :pets, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
+  #ランキングの為のアソシエーション
+  has_many :favorite_posts, through: :favorites, source: :post
 
   
    # フォローしている

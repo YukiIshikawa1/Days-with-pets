@@ -1,18 +1,16 @@
 <div class="index-background">
 
 <div class="container">
-  <div class="row mt-3">
+  <div class="row mt-4">
     <% if user_signed_in? %>
-    <div>
-      <%= render "users/info", user: @user %> 
+    <div class="col-md-3">
+      <%= render "users/info", user: @user , posts: @posts_favorite %> 
     <% end %>
     </div>  
     
-    <div class="col-md-7">
+    <div class="col-md-9">
       <%= render "posts/index", posts: @posts %>
     </div>  
     
-    <div class="col-2">
-    </div>  
   </div>
-  </div>
+</div>

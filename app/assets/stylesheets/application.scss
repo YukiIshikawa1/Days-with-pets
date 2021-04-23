@@ -90,18 +90,20 @@ h1{
   position: absolute;
   display: block;
   width: 960px;
-  background: #fff;
-  opacity: 0.6;
   padding: 20px;
   bottom: 200px;
   left: 200px;
   line-height: 20px;
   letter-spacing: 5px;
-  font-size: 25px;
-  color:#008800;
   line-height: 1.5;
   font-weight: bold;
   font-family: "ＭＳ ゴシック",sans-serif; 
+  color: #fff;
+	font-size: 25px;
+	line-height: 1.5;
+	font-weight: bold;
+	text-align:center;
+	text-shadow: 3px 3px 3px #008080; 
   }
  p.about-herder {line-height: 40px;}
 //  top画面
@@ -110,14 +112,18 @@ h1{
   position: absolute;
   display: block;
   width: 960px;
-  background: #fff;
-  opacity: 0.7;
   padding: 10px;
   bottom: 500px;
   left: 200px;
   line-height: 1.5;
   font-weight: bold;
   font-family: "ＭＳ ゴシック",sans-serif; 
+  color: #fff;
+	font-size: 40px;
+	line-height: 1.5;
+	font-weight: bold;
+	text-align:center;
+	text-shadow: 3px 3px 3px #000;
  }
  
  .top-rog{
@@ -277,7 +283,7 @@ h1{
 }
 //ペット詳細
 .pet-show-bg{
-  background-image: image-url("background3.jpg");
+  background-image: image-url("/background3.jpg");
   position: relative;
   width: 100%;
   min-height: 70vh;

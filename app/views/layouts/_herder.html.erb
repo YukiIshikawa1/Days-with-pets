@@ -14,35 +14,35 @@
         <ul class="navbar-nav ml-auto">
           <% if user_signed_in? %>
             <li class="nav-item">
-              <%= link_to  "about",  post_about_path, class: "btn btn-outline-success fas fa-crow p-3 " %>
+              <%= link_to  "about",  post_about_path, class: "btn btn-outline-success fas fa-crow p-3 shadow" %>
             </li>          
             <li class="nav-item">
-              <%= link_to  "会員詳細", user_path(current_user), class: "btn btn-outline-success fas fa-user p-3" %>
+              <%= link_to  "会員詳細", user_path(current_user), class: "btn btn-outline-success fas fa-user p-3 shadow" %>
             </li>          
             <li class="nav-item">
-              <%= link_to  "新規投稿", new_post_path, class: "btn btn-outline-success fas fa-paw p-3" %>
+              <%= link_to  "新規投稿", new_post_path, class: "btn btn-outline-success fas fa-paw p-3 shadow" %>
             </li>
             <li class="nav-item">
-              <%= link_to  "ペット登録", new_user_pet_path(current_user), class: "btn btn-outline-success fas fa-cat p-3" %>
+              <%= link_to  "ペット登録", new_user_pet_path(current_user), class: "btn btn-outline-success fas fa-cat p-3 shadow" %>
             </li>            
             <li class="nav-item">
-              <%= link_to  "投稿一覧", posts_path, class: "btn btn-outline-success fas fa-dove p-3" %>
+              <%= link_to  "投稿一覧", posts_path, class: "btn btn-outline-success fas fa-dove p-3 shadow" %>
             </li>
             <li class="nav-item">
-              <%= link_to  "ログアウト", destroy_user_session_path,method: :delete, class: "btn btn-outline-success fas fa-dog p-3" %>
+              <%= link_to  "ログアウト", destroy_user_session_path,method: :delete, class: "btn btn-outline-success fas fa-dog p-3 shadow" %>
             </li>
           <% else %>
             <li class="nav-item">
-              <%= link_to  "about",  post_about_path, class: "btn btn-outline-success fas fa-crow p-3 " %>
+              <%= link_to  "about",  post_about_path, class: "btn btn-outline-success fas fa-crow p-3 shadow" %>
             </li>
             <li class="nav-item">
-              <%= link_to  "投稿一覧", posts_path, class: "btn btn-outline-success fas fa-dove p-3" %>
+              <%= link_to  "投稿一覧", posts_path, class: "btn btn-outline-success fas fa-dove p-3 shadow" %>
             </li>
             <li class="nav-item">
-              <%= link_to  "ログイン", new_user_session_path, class: "btn btn-outline-success fas fa-user p-3 " %>
+              <%= link_to  "ログイン", new_user_session_path, class: "btn btn-outline-success fas fa-user p-3 shadow" %>
             </li>
             <li class="nav-item">
-              <%= link_to  "新規登録", new_user_registration_path, class: "btn btn-outline-success fas fa-user-check p-3" %>
+              <%= link_to  "新規登録", new_user_registration_path, class: "btn btn-outline-success fas fa-user-check p-3 shadow" %>
             </li>          
           <% end %>  
           </ul>
