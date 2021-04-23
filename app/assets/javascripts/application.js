@@ -18,6 +18,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
+/*global $*/
 
 $(function() {
   $(".full").slick({
