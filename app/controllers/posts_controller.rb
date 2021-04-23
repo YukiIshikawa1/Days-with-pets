@@ -69,9 +69,5 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     redirect_to posts_path unless @post.user == current_user
   end
-<<<<<<<<< saved version
-
-=========
   
->>>>>>>>> local version
 end
