@@ -1,24 +1,27 @@
 class RelationshipsController < ApplicationController
-  
-def create #フォローする 
+  # フォローする
+  def create
     current_user.follow(params[:user_id])
-    redirect_to request.referer 
-end
+    redirect_to request.referer
+  end
 
-def destroy #フォローを外す　
+  # フォローを外す　
+  def destroy
     current_user.unfollow(params[:user_id])
     redirect_back(fallback_location: root_path)
-end
+  end
 
-def follower #follower一覧
+  # follower一覧
+  def follower
     user = User.find(params[:user_id])
     @users = user.following_user
     # .follower_userメソッド ：Userモデルで定義済
-end
+  end
 
-def followed #followed一覧
+  # followed一覧
+  def followed
     user = User.find(params[:user_id])
     @users = user.follower_user
     # .follower_userメソッド ：Userモデルで定義済
-end
+  end
 end

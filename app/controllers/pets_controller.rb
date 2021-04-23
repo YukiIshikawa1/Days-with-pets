@@ -1,6 +1,6 @@
 class PetsController < ApplicationController
-  before_action :ensure_current_user, only: [:edit,:update,:destroy]
-  
+  before_action :ensure_current_user, only: %i[edit update destroy]
+
   def new
     @pet = Pet.new
   end
@@ -9,10 +9,10 @@ class PetsController < ApplicationController
     @pet = Pet.new(pet_params)
     @pet.user = current_user
     if @pet.save
-      redirect_to user_pet_path(current_user, @pet.id), success: "登録しました"
+      redirect_to user_pet_path(current_user, @pet.id), success: '登録しました'
     else
-      render "new", denger: "登録に失敗しました" 
-    end  
+      render 'new', denger: '登録に失敗しました'
+    end
   end
 
   def index
@@ -25,38 +25,35 @@ class PetsController < ApplicationController
   end
 
   def edit
-    @pet = Pet.find(params[:id])    
+    @pet = Pet.find(params[:id])
   end
 
   def update
     @pet = Pet.find(params[:id])
     @pet.user.id = current_user.id
     if @pet.update(pet_params)
-      redirect_to user_pet_path(current_user,@pet.id), success: "編集しました"
+      redirect_to user_pet_path(current_user, @pet.id), success: '編集しました'
     else
-    @pet = Pet.find(params[:id])
-    render "edit"
+      @pet = Pet.find(params[:id])
+      render 'edit'
     end
   end
 
   def destroy
     @pet = Pet.find(params[:id])
     @pet.destroy
-    redirect_to user_pets_path(@pet.user_id,@pet.id)
+    redirect_to user_pets_path(@pet.user_id, @pet.id)
   end
-  
+
   private
-  
-  #保存するテーブル名とカラム名
+
+  # 保存するテーブル名とカラム名
   def pet_params
-    params.require(:pet).permit(:pet_image,:name,:gender,:age,:category,:genre)
+    params.require(:pet).permit(:pet_image, :name, :gender, :age, :category, :genre)
   end
-  
+
   def ensure_current_user
     @pet = Pet.find(params[:id])
-    unless @pet.user == current_user
-      redirect_to user_pets_path
-    end
+    redirect_to user_pets_path unless @pet.user == current_user
   end
-  
 end

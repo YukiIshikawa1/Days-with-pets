@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-  
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(post_comment_params)
@@ -13,11 +12,10 @@ class CommentsController < ApplicationController
     @comment.destroy
     render :index
   end
-  
+
   private
-  
+
   def post_comment_params
-    params.require(:comment).permit(:comment,:post_id,:user_id)
+    params.require(:comment).permit(:comment, :post_id, :user_id)
   end
-  
 end
