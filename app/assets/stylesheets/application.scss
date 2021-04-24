@@ -59,6 +59,12 @@ header{
   background-size: auto;
   background-color: rgb(255, 255, 255) !important;
 }
+//ハンバーガー
+.navbar-toggler{
+    border: solid;
+    background-color:#fff;
+    color:#000000;
+}
 
 //フッター
 footer{
@@ -99,11 +105,11 @@ h1{
   font-weight: bold;
   font-family: "ＭＳ ゴシック",sans-serif; 
   color: #fff;
-	font-size: 25px;
-	line-height: 1.5;
-	font-weight: bold;
-	text-align:center;
-	text-shadow: 3px 3px 3px #008080; 
+  font-size: 25px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-align:center;
+  text-shadow: 3px 3px 3px #008080; 
   }
  p.about-herder {line-height: 40px;}
 //  top画面
@@ -119,11 +125,11 @@ h1{
   font-weight: bold;
   font-family: "ＭＳ ゴシック",sans-serif; 
   color: #fff;
-	font-size: 40px;
-	line-height: 1.5;
-	font-weight: bold;
-	text-align:center;
-	text-shadow: 3px 3px 3px #000;
+  font-size: 40px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-align:center;
+  text-shadow: 3px 3px 3px #000;
  }
  
  .top-rog{
