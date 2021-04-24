@@ -1,54 +1,52 @@
 <header>
   <div class="herder-background">
+  
   <nav class="navbar navbar-expand-lg navdar-light">
-    
     <nav class="navbar navbar-nav navbar-left title">
       <%= link_to root_path do %>
         <%= image_tag asset_path("log.png"), :size => "300x120" %>
       <% end %>
     </nav>
-    
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
       
         <ul class="navbar-nav ml-auto">
           <% if user_signed_in? %>
+              <p class="nick_name">ようこそ<%= current_user.nick_name  %></p>
             <li class="nav-item">
-              <%= link_to  "about",  post_about_path, class: "btn btn-outline-success fas fa-crow p-3 mb-3 shadow" %>
+              <%= link_to  "about",  post_about_path, class: "btn btn-outline-success fas fa-crow p-3 shadow" %>
             </li>          
             <li class="nav-item">
-              <%= link_to  "会員詳細", user_path(current_user), class: "btn btn-outline-success fas fa-user p-3 mb-3  shadow" %>
+              <%= link_to  "会員詳細", user_path(current_user), class: "btn btn-outline-success fas fa-user p-3 shadow" %>
             </li>          
             <li class="nav-item">
-              <%= link_to  "新規投稿", new_post_path, class: "btn btn-outline-success fas fa-paw p-3 mb-3  shadow" %>
+              <%= link_to  "新規投稿", new_post_path, class: "btn btn-outline-success fas fa-paw p-3 shadow" %>
             </li>
             <li class="nav-item">
-              <%= link_to  "ペット登録", new_user_pet_path(current_user), class: "btn btn-outline-success fas fa-cat p-3 mb-3  shadow" %>
+              <%= link_to  "ペット登録", new_user_pet_path(current_user), class: "btn btn-outline-success fas fa-cat p-3 shadow" %>
             </li>            
             <li class="nav-item">
-              <%= link_to  "投稿一覧", posts_path, class: "btn btn-outline-success fas fa-dove p-3 mb-3  shadow" %>
+              <%= link_to  "投稿一覧", posts_path, class: "btn btn-outline-success fas fa-dove p-3 shadow" %>
             </li>
             <li class="nav-item">
-              <%= link_to  "ログアウト", destroy_user_session_path,method: :delete, class: "btn btn-outline-success fas fa-dog p-3  mb-3 shadow" %>
+              <%= link_to  "ログアウト", destroy_user_session_path,method: :delete, class: "btn btn-outline-success fas fa-dog p-3 shadow" %>
             </li>
           <% else %>
             <li class="nav-item">
-              <%= link_to  "about",  post_about_path, class: "btn btn-outline-success fas fa-crow p-3 mb-3  shadow" %>
+              <%= link_to  "about",  post_about_path, class: "btn btn-outline-success fas fa-crow p-3 shadow" %>
             </li>
             <li class="nav-item">
-              <%= link_to  "投稿一覧", posts_path, class: "btn btn-outline-success fas fa-dove p-3 mb-3 shadow" %>
+              <%= link_to  "投稿一覧", posts_path, class: "btn btn-outline-success fas fa-dove p-3 shadow" %>
             </li>
             <li class="nav-item">
-              <%= link_to  "ログイン", new_user_session_path, class: "btn btn-outline-success fas fa-user p-3  mb-3 shadow" %>
+              <%= link_to  "ログイン", new_user_session_path, class: "btn btn-outline-success fas fa-user p-3 shadow" %>
             </li>
             <li class="nav-item">
-              <%= link_to  "新規登録", new_user_registration_path, class: "btn btn-outline-success fas fa-user-check p-3 mb-3  shadow" %>
+              <%= link_to  "新規登録", new_user_registration_path, class: "btn btn-outline-success fas fa-user-check p-3 shadow" %>
             </li>          
           <% end %>  
           </ul>
-      </nav>
-    </div>
+    </nav>
   </div>
 </header>

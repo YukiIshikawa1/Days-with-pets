@@ -1,5 +1,11 @@
 <div class="pet-show-bg">
 <div class="container pt-5 text-center">
+  
+      <% if flash[:notice] %>
+        <p id="notice">
+      <%= flash[:notice] %>
+        </p>
+      <% end %>
 
   <h2>ペット詳細</h2>
       

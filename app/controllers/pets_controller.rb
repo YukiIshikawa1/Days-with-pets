@@ -9,7 +9,8 @@ class PetsController < ApplicationController
     @pet = Pet.new(pet_params)
     @pet.user = current_user
     if @pet.save
-      redirect_to user_pet_path(current_user, @pet.id), success: '登録しました'
+      flash[:notice] = "投稿しました!!!" 
+      redirect_to user_pet_path(current_user, @pet.id)
     else
       render 'new', denger: '登録に失敗しました'
     end
@@ -32,7 +33,8 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
     @pet.user.id = current_user.id
     if @pet.update(pet_params)
-      redirect_to user_pet_path(current_user, @pet.id), success: '編集しました'
+      flash[:notice] = "更新しました!!!" 
+      redirect_to user_pet_path(current_user, @pet.id)
     else
       @pet = Pet.find(params[:id])
       render 'edit'

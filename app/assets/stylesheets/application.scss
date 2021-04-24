@@ -33,6 +33,11 @@ table th {/*table内のthに対して*/
   z-index: 100;
  }
  
+ #notice{
+     color:#008000;
+     font-size:25px;
+ }
+ 
  //ログイン関係
  .rog-bg{
   background-image: image-url("background3.jpg");
@@ -48,6 +53,9 @@ table th {/*table内のthに対して*/
 header{
   background:#FFFF99;
 }
+.nick_name{
+    margin-top:15px;
+}
 
 .nav-item{
    padding-left:30px;
@@ -59,12 +67,7 @@ header{
   background-size: auto;
   background-color: rgb(255, 255, 255) !important;
 }
-//ハンバーガー
-.navbar-toggler{
-    border: solid;
-    background-color:#fff;
-    color:#000000;
-}
+
 
 //フッター
 footer{
