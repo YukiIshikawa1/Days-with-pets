@@ -1,5 +1,11 @@
 <div class="pet-show-bg">
 <div class="container pt-5 text-center">
+  
+      <% if flash[:notice] %>
+        <p id="notice">
+      <%= flash[:notice] %>
+        </p>
+      <% end %>
 
   <h2>ペット詳細</h2>
       
@@ -56,7 +62,7 @@
               <th><%= link_to "投稿一覧",posts_path , class:"btn btn-primary" %></th>
               <% if current_user == @pet.user %>
               <td>
-                <%= link_to "ペット編集",edit_user_pet_path(@pet.user_id,@pet.id) , class:"btn btn-success" %>
+                <%= link_to "ペット編集",edit_user_pet_path(@pet.user_id,@pet.id) , class: "btn btn-success" %>
                 <%= link_to "削除", user_pet_path(current_user,@pet.id), method: :delete, class: "btn btn-danger"  %>
               </td>             
               <% end %>    

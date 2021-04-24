@@ -18,7 +18,8 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      redirect_to post_path(@post.id), success: '投稿しました'
+      flash[:notice] = "投稿しました!!!" 
+      redirect_to post_path(@post.id)
     else
       @pet = Pet.where(user_id: current_user.id)
       render 'new', denger: '投稿に失敗しました'
@@ -50,8 +51,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.user_id = current_user.id
     if @post.update(post_params)
-      redirect_to post_path(@post.id), success: '編集しました'
+      flash[:notice] = "編集しました!!!" 
+      redirect_to post_path(@post.id)
     else
+      flash[:notice] = "編集に失敗しました" 
       @post = Post.find(params[:id])
       render 'edit'
     end

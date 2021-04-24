@@ -10,67 +10,68 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_210_412_034_203) do
-  create_table 'comments', force: :cascade do |t|
-    t.integer 'user_id'
-    t.integer 'post_id'
-    t.text 'comment', null: false
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+ActiveRecord::Schema.define(version: 2021_04_12_034203) do
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "post_id"
+    t.text "comment", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'favorites', force: :cascade do |t|
-    t.integer 'user_id'
-    t.integer 'post_id'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'pets', force: :cascade do |t|
-    t.integer 'user_id'
-    t.string 'genre', null: false
-    t.string 'category', null: false
-    t.string 'name', null: false
-    t.string 'pet_image_id', null: false
-    t.integer 'gender', null: false
-    t.string 'age', null: false
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.string 'category_id'
-    t.index ['user_id'], name: 'index_pets_on_user_id'
+  create_table "pets", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "genre", null: false
+    t.string "category", null: false
+    t.string "name", null: false
+    t.string "pet_image_id", null: false
+    t.integer "gender", null: false
+    t.string "age", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_pets_on_user_id"
   end
 
-  create_table 'posts', force: :cascade do |t|
-    t.integer 'user_id'
-    t.integer 'genre_id'
-    t.integer 'pet_id'
-    t.string 'post_image_id', null: false
-    t.string 'title', null: false
-    t.text 'text', null: false
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "posts", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "genre_id"
+    t.integer "pet_id"
+    t.string "post_image_id", null: false
+    t.string "title", null: false
+    t.text "text", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'relationships', force: :cascade do |t|
-    t.integer 'follower_id'
-    t.integer 'followed_id'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['followed_id'], name: 'index_relationships_on_followed_id'
-    t.index %w[follower_id followed_id], name: 'index_relationships_on_follower_id_and_followed_id', unique: true
-    t.index ['follower_id'], name: 'index_relationships_on_follower_id'
+  create_table "relationships", force: :cascade do |t|
+    t.integer "follower_id"
+    t.integer "followed_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["followed_id"], name: "index_relationships_on_followed_id"
+    t.index ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
+    t.index ["follower_id"], name: "index_relationships_on_follower_id"
   end
 
-  create_table 'users', force: :cascade do |t|
-    t.string 'email', default: '', null: false
-    t.string 'encrypted_password', default: '', null: false
-    t.string 'name', null: false
-    t.string 'nick_name', null: false
-    t.string 'user_image_id'
-    t.string 'reset_password_token'
-    t.datetime 'reset_password_sent_at'
-    t.datetime 'remember_created_at'
-    t.index ['email'], name: 'index_users_on_email', unique: true
-    t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "name", null: false
+    t.string "nick_name", null: false
+    t.string "user_image_id"
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
 end

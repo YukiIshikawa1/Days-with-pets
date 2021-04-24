@@ -13,6 +13,7 @@
       
         <ul class="navbar-nav ml-auto">
           <% if user_signed_in? %>
+              <p class="nick_name">ようこそ<%= current_user.nick_name  %></p>
             <li class="nav-item">
               <%= link_to  "about",  post_about_path, class: "btn btn-outline-success fas fa-crow p-3 shadow" %>
             </li>          

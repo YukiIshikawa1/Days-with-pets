@@ -33,6 +33,11 @@ table th {/*table内のthに対して*/
   z-index: 100;
  }
  
+ #notice{
+     color:#008000;
+     font-size:25px;
+ }
+ 
  //ログイン関係
  .rog-bg{
   background-image: image-url("background3.jpg");
@@ -48,6 +53,9 @@ table th {/*table内のthに対して*/
 header{
   background:#FFFF99;
 }
+.nick_name{
+    margin-top:15px;
+}
 
 .nav-item{
    padding-left:30px;
@@ -59,6 +67,7 @@ header{
   background-size: auto;
   background-color: rgb(255, 255, 255) !important;
 }
+
 
 //フッター
 footer{
@@ -99,11 +108,11 @@ h1{
   font-weight: bold;
   font-family: "ＭＳ ゴシック",sans-serif; 
   color: #fff;
-	font-size: 25px;
-	line-height: 1.5;
-	font-weight: bold;
-	text-align:center;
-	text-shadow: 3px 3px 3px #008080; 
+  font-size: 25px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-align:center;
+  text-shadow: 3px 3px 3px #008080; 
   }
  p.about-herder {line-height: 40px;}
 //  top画面
@@ -119,11 +128,11 @@ h1{
   font-weight: bold;
   font-family: "ＭＳ ゴシック",sans-serif; 
   color: #fff;
-	font-size: 40px;
-	line-height: 1.5;
-	font-weight: bold;
-	text-align:center;
-	text-shadow: 3px 3px 3px #000;
+  font-size: 40px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-align:center;
+  text-shadow: 3px 3px 3px #000;
  }
  
  .top-rog{

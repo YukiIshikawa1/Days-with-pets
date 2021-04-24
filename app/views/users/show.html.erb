@@ -1,5 +1,11 @@
 <div class="user-show-edit-bg">
 <div class="container pt-5 text-center">
+  
+  　<% if flash[:notice] %>
+  　   <p id="notice">
+  　<%= flash[:notice] %>
+  　   </p>
+  　<% end %>  
 
   <h2><i class="fas fa-user"></i>会員詳細</h2>
       
@@ -15,13 +21,6 @@
               </td> 
             </tr>
           </div>  
-           
-          <div class="form-group">  
-            <tr>
-              <th><h4>名前</h4></th>
-              <td><h4><%= @user.name %></h4></td>
-            </tr>
-          </div>
           
           <div class="form-group">  
             <tr>
@@ -29,6 +28,11 @@
               <td><h4><%= @user.nick_name %></h4></td>
             </tr>
           </div>
+          
+            <tr>
+              <th><h4>投稿数</h4></th>
+              <td><h4><%= @user.posts.count %>件</h4></td>
+            </tr>        
           
           <div class="form-group">  
             <tr>
