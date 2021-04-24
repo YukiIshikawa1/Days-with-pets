@@ -1,6 +1,5 @@
 class Pet < ApplicationRecord
   has_many :posts
-
   belongs_to :user
 
   attachment :pet_image
