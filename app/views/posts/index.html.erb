@@ -1,6 +1,15 @@
 <div class="index-background">
 
 <div class="container">
+  
+  <div class="text-center">  
+  　<% if flash[:notice] %>
+  　   <p id="notice">
+  　<%= flash[:notice] %>
+  　   </p>
+  　<% end %>  
+  </div>　
+  
   <div class="row mt-4">
     <% if user_signed_in? %>
     <div class="col-md-3">
