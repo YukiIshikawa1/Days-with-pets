@@ -52,9 +52,9 @@
   <% posts.each.with_index(1) do |post, i| %>
     <table>
       <tr>
-        <td class="p-3">
+        <th>
           第<%= i %>位 
-        </td>
+        </th>
         <td>
           <%= link_to post_path(post.id) do %>
             <%= post.title  %>
