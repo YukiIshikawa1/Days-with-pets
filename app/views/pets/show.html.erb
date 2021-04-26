@@ -53,7 +53,14 @@
           <div class="form-group">  
             <tr>
               <th><h4>年齢</h4></th>
-              <td><h4><%= @pet.age %></h4></td>
+              <td><h4><%= @pet.age %>才</h4></td>
+            </tr>            
+          </div>
+  
+          <div class="form-group">  
+            <tr>
+              <th><h4>投稿数</h4></th>
+              <td><h4><%= @pet.posts.count %>件</h4></td>
             </tr>            
           </div>
           
