@@ -17,6 +17,7 @@
       <% if current_user == @post.user %>
         <div class="mb-3">
           <%= link_to "投稿編集",edit_post_path(@post.id), class:"btn btn-success"  %>
+          <%= link_to "投稿削除",post_path(@post.id), method: :delete, data:{confirm:"本当に削除しますか？"}, class: "btn btn-danger"   %>
         </div>  
       <% end %>
       
@@ -61,7 +62,7 @@
       </table>
       <!--ここにコメント関係を-->
       <div id="post_favorite_<%= @post.id %>">
-        <%= render "favorites/favorite", post: @post %>
+        いいね<%= render "favorites/favorite", post: @post %>
       </div>
       
         
