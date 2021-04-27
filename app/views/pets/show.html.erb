@@ -8,7 +8,12 @@
       <% end %>
 
   <h2>ペット詳細</h2>
-      
+  <h3>飼い主：
+    <%= link_to user_path(@pet.user) do %>
+      <%= @pet.user.nick_name %>
+    <% end %> 
+  </h3>  
+  
       <div class="row">
         <table class="table">     
           <tbody>
@@ -22,49 +27,36 @@
             </tr>
           </div>  
            
-          <div class="form-group">  
             <tr>
               <th><h4>名前</h4></th>
               <td><h4><%= @pet.name %></h4></td>
             </tr>
-          </div>
 
-          <div class="form-group">  
             <tr>
               <th><h4>動物の種類</h4></th>
               <td><h4><%= @pet.genre %></h4></td>
             </tr>
-          </div>
           
-          <div class="form-group">  
             <tr>
               <th><h4>動物の品種</h4></th>
               <td><h4><%= @pet.category %></h4></td>
             </tr>
-          </div>          
           
-          <div class="form-group">  
             <tr>
               <th><h4>性別</h4></th>
               <td><h4><%= @pet.gender %></h4></td>
             </tr>
-          </div>
           
-          <div class="form-group">  
             <tr>
               <th><h4>年齢</h4></th>
               <td><h4><%= @pet.age %>才</h4></td>
             </tr>            
-          </div>
   
-          <div class="form-group">  
             <tr>
               <th><h4>投稿数</h4></th>
               <td><h4><%= @pet.posts.count %>件</h4></td>
             </tr>            
-          </div>
           
-          <div class="form-group">  
             <tr>
               <th><%= link_to "投稿一覧",posts_path , class:"btn btn-primary" %></th>
               <% if current_user == @pet.user %>
@@ -74,13 +66,10 @@
               </td>             
               <% end %>    
             </tr>            
-          </div> 
           
-          <div class="form-group">  
             <tr>
               <th><%= link_to "会員ペット一覧",user_pets_path(@pet.user_id,@pet.id) ,class:"btn btn-primary" %></th>
             </tr>            
-          </div>    
           
           </tbody>
         </table>            

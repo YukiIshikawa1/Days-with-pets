@@ -28,7 +28,7 @@ class PostsController < ApplicationController
 
   def index
     @posts_favorite = Post.find(Favorite.group(:post_id).order('count(post_id) desc').limit(10).pluck(:post_id))
-    @posts = Post.all.page(params[:page]).per(5)
+    @posts = Post.all.order(created_at: :desc).page(params[:page]).per(5)
     @user1 = User.find_by(params[:id])
     @user = User.find(current_user.id) if user_signed_in?
   end

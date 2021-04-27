@@ -32,7 +32,7 @@
       </div>
       <table class="table">
         <tr>
-          <th>本文</th> 
+          <th>写真について一言</th> 
           <th class="post-text ">
             <%= @post.text %>
           </th>
@@ -41,14 +41,16 @@
         <tr class="post-genre">  
           <th>ペットの名前</th> 
           <th>
+            <%= link_to user_pet_path(@pet.user,@pet) do %>
              <%= @pet.name %>
+            <% end %> 
           </th>
         </tr>      
         
         <tr class="post-genre">  
           <th>ペットの種類</th> 
           <th>
-             <%= @pet.genre %>
+              <%= @pet.genre %>
           </th>
         </tr>
       
