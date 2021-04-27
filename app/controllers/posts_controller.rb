@@ -51,12 +51,12 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.user_id = current_user.id
     if @post.update(post_params)
-      flash[:notice] = "編集しました!!!" 
-      redirect_to post_path(@post.id)
+       flash[:notice] = "編集しました!!!" 
+       redirect_to post_path(@post.id)
     else
-      flash[:notice] = "編集に失敗しました" 
-      @post = Post.find(params[:id])
-      render 'edit'
+       flash[:notice] = "編集に失敗しました" 
+       @post = Post.find(params[:id])
+       render 'edit'
     end
   end
   
