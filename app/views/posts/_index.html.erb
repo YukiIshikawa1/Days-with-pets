@@ -6,7 +6,7 @@
   </div> 
   
   <div class="user">
-    <%= link_to user_path(@user1.id) do %>
+    <%= link_to user_path(image.user.id) do %>
       by <%= image.user.name %>
     <% end %>
   </div>    
@@ -14,10 +14,6 @@
   <div class="title">
     タイトル：<%= image.title %>
   </div>
-  
-  <div class="text">
-    本文：<%= image.text %>
-  </div> 
   
   <div class="favorite ">
     いいね：<%= image.favorites.count %>件  コメント：<%= image.comments.count %>件
