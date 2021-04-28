@@ -9,11 +9,12 @@
         </p>
       <% end %>
         
-      <% @pets.each do |pet| %>
-      
         <div class="user-name">
-        <p class="pet-show-user"><%= pet.user.nick_name %>さんのペット達</p>
-        </div>
+        <p class="pet-show-user"><%= @user.nick_name %>さんのペット達</p>
+        </div>        
+        
+      <% @pets.each do |pet| %>
+    
       
         <div class="image">
           <h2><%= pet.name %></h2>
