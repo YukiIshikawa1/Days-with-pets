@@ -43,7 +43,7 @@
   　<% if current_user.following?(user) %>
     　<%= link_to 'フォロー外す', user_relationship_path(user.id), method: :delete, class: "btn btn-warning btn-lg btn-block" %>
     <% else %>
-    　<%= link_to 'フォローする', user_relationships_path(user.id), method: :POST , class: "btn btn-primary btn-lg btn-block"%>
+    　<%= link_to 'フォローする', user_relationships_path(user.id), method: :POST , class: "btn btn-success btn-lg btn-block"%>
     <% end %>
   <% end %>
 </div>  
