@@ -7,26 +7,41 @@
         <table>     
           <tbody>
             
-          <div class="form-group">
             <tr>
               <th><i class="fas fa-image"></i>会員画像</th>
               <td>
                 <%=  attachment_image_tag @user, :user_image, fallback: "No_image.jpeg" ,size:"300x300",class: 'pet-image'%>  
               </td> 
             </tr>
-          </div>  
           
-          <div class="form-group">  
+     
             <tr>
               <th><h4>ニックネーム</h4></th>
               <td><h4><%= @user.nick_name %></h4></td>
             </tr>
-          </div>
           
             <tr>
               <th><h4>投稿数</h4></th>
               <td><h4><%= @user.posts.count %>件</h4></td>
             </tr>        
+          
+          <tr>
+            <th>フォロー</th>
+            <th>
+              <%= link_to follower_user_path(@user.id) do %>
+                <%= @user.following_user.count %>
+              <% end %>
+            </th>  
+          </tr>
+          
+          <tr>
+            <th>フォロワー</th>
+            <th>
+              <%= link_to followed_user_path(@user.id) do %>
+                <%= @user.follower_user.count %>
+              <% end %>      
+            </th>  
+          </tr>        
           
           <div class="form-group">  
             <tr>
@@ -45,7 +60,7 @@
                   　<% if current_user.following?(@user) %>
                     　<%= link_to 'フォロー外す', user_relationship_path(@user.id), method: :delete, class: "btn btn-warning " %>
                     <% else %>
-                    　<%= link_to 'フォローする', user_relationships_path(@user.id), method: :POST , class: "btn btn-primary "%>
+                    　<%= link_to 'フォローする', user_relationships_path(@user.id), method: :POST , class: "btn btn-success "%>
                     <% end %>
                   <% end %>
                 </td>  
