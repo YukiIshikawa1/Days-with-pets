@@ -1,7 +1,8 @@
 <% posts.each do |image| %>
+<div class="text-center">
   <div class="index-image">
     <%= link_to user_path(image.user) do %>
-      <%= attachment_image_tag image.user, :user_image, size:"100x100" ,class: 'rounded-circle shadow' %>
+      <%= attachment_image_tag image.user, :user_image, size:"100x100",fallback: "No_image.jpeg"  ,class: 'rounded-circle shadow' %>
     <% end %>
   </div> 
   
@@ -19,11 +20,14 @@
     いいね：<%= image.favorites.count %>件  コメント：<%= image.comments.count %>件
   </div>    
     
-  <div class="post-image mb-5">
+ 
+  <div class="post-image mb-5 ">
     <%= link_to post_path(image) do %>
-      <%= attachment_image_tag image, :post_image, size:"600x400" ,class: 'border border-primary shadow' %>
+      <%= attachment_image_tag image, :post_image, size:"400x400" ,class: 'border border-primary shadow' %>
     <% end %> 
   </div>
+  
+  </div>  
   
 <% end %>
 <div class="paginate mr-5">
