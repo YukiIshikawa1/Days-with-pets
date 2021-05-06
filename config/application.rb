@@ -6,6 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
+
 module DWP
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -16,4 +18,12 @@ module DWP
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
   end
+end
+
+config.generators do |g|
+  g.test_framework :rspec,
+  fixtures: false,
+  view_specs: false,
+  helper_specs: false,
+  routing_specs: false
 end
