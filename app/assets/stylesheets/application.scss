@@ -85,7 +85,9 @@ table th {/*table内のthに対して*/
   margin: auto;
   text-align: center;
 }
-
+.background1{
+  background-image: image-url("background1.jpg");
+}
  
  /*ページネーション自体のデザイン*/
 .pagination>li>a {          
@@ -302,10 +304,9 @@ h1{
   background-size: auto;
   background-color: rgb(255, 255, 255) !important;
 }
-.container-new-edit{
+.container{
   text-align: center;
   top: 100px;
-  padding-top: 100px;
 }
 
 //投稿編集画面

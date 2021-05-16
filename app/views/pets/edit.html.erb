@@ -1,11 +1,10 @@
-<div class="container pt-5 text-center">
-
-  <h2>会員編集</h2>
+<div class="container pt-5">
+  <div class="pet-new-bg pt-5">  
+    <h2>会員編集</h2>
       
     <%= form_with model: @pet,url:user_pet_path(current_user,@pet.id), local: true do |f| %>
       <div class="row">
         <table>     
-          <tbody>
            
           <div class="form-group">
           
@@ -46,10 +45,9 @@
             </tr>            
           </div>
           
-          </tbody>
         </table>            
       </div>
  
       <% end %>
-      
+  </div>
 </div>
