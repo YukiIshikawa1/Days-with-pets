@@ -1,24 +1,25 @@
       <div>
         <%= render "devise/shared/error_messages", resource: resource %>
       </div>
-<div class="rog-bg">      
+  
 <div class="container">
+  <div class="new-background">    
   <div class="row clo-4">
-    <div class="col-md-11 offset-md-1">
+    <div class="col-md-11 offset-md-1 mt-5">
       <h2>ログイン</h2>
 <%= form_with model: @user, url: user_session_path, local: true do |f| %>
-  <div class="field mx-auto">
+  <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control col-md-4 col-md-offset-2"%>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control col-md-4 col-md-offset-2 mx-auto"%>
   </div>
 
-  <div class="field mx-auto">
+  <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password", class: "form-control col-md-4 col-md-offset-2" %>
+    <%= f.password_field :password, autocomplete: "current-password", class: "form-control col-md-4 col-md-offset-2 mx-auto" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field mx-auto">
+    <div class="field">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
